@@ -1,6 +1,6 @@
 # Scripts 
 ## MenuScrape
-Version 0.01 
+Version 0.01   
 **Features**
 - Identified modular URL to parse JSON
 - Change variables inside of script to display JSON menu data
