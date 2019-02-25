@@ -2,11 +2,13 @@
 ## MenuScrape
 Version 0.01   
 **Features**
-- Identified modular URL to parse JSON
-- Change variables inside of script to display JSON menu data
+- Identified URLs to parse JSON
+- stripped allergens out and made them boolean values
+- converted startTime and endTime from string to date type
+- Added three URLS
+
 
 **Next Steps**
-- pass date
-- pass dining hall
-- selection meals
+- make more modular? 
+- add to gce?
 
