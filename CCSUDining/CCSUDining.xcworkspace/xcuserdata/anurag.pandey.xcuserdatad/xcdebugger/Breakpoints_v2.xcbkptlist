@@ -1,0 +1,119 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Bucket
+   type = "0"
+   version = "2.0">
+   <Breakpoints>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CCSUDining/DiningHalls/DiningHallViewController.swift"
+            timestampString = "572945368.393429"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "20"
+            endingLineNumber = "20"
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CCSUDining/Services/APIManager.swift"
+            timestampString = "572945368.393531"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "17"
+            endingLineNumber = "17"
+            landmarkName = "fetchCollection(collectionName:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static CCSUDining.APIManager.fetchCollection(collectionName: Swift.String) -&gt; ()"
+                  moduleName = "CCSUDining"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anurag.pandey/Documents/Learning/CCSUDining/CCSUDining/CCSUDining/Services/APIManager.swift"
+                  timestampString = "572945368.61097"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "30">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static CCSUDining.APIManager.fetchCollection(collectionName: Swift.String) -&gt; ()"
+                  moduleName = "CCSUDining"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anurag.pandey/Documents/Learning/CCSUDining/CCSUDining/CCSUDining/Services/APIManager.swift"
+                  timestampString = "572945368.6128891"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "59">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CCSUDining/Services/APIManager.swift"
+            timestampString = "572945368.393659"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "fetchCollection(collectionName:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "static CCSUDining.APIManager.fetchCollection(collectionName: Swift.String) -&gt; ()"
+                  moduleName = "CCSUDining"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anurag.pandey/Documents/Learning/CCSUDining/CCSUDining/CCSUDining/Services/APIManager.swift"
+                  timestampString = "572945368.6208709"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "18"
+                  endingLineNumber = "18"
+                  offsetFromSymbolStart = "30">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in static CCSUDining.APIManager.fetchCollection(collectionName: Swift.String) -&gt; ()"
+                  moduleName = "CCSUDining"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anurag.pandey/Documents/Learning/CCSUDining/CCSUDining/CCSUDining/Services/APIManager.swift"
+                  timestampString = "572945368.622861"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "20"
+                  endingLineNumber = "20"
+                  offsetFromSymbolStart = "59">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+   </Breakpoints>
+</Bucket>
