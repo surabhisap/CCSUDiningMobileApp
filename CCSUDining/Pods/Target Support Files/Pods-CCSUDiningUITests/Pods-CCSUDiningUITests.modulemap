@@ -1,0 +1,6 @@
+framework module Pods_CCSUDiningUITests {
+  umbrella header "Pods-CCSUDiningUITests-umbrella.h"
+
+  export *
+  module * { export * }
+}
