@@ -9,6 +9,7 @@
 /* Begin PBXBuildFile section */
 		0C35B59D9CA3DC758476C640 /* Pods_CCSUDiningUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE2DEE332F64B69A556F637 /* Pods_CCSUDiningUITests.framework */; };
 		39C1B467F9E24A27300AC03E /* Pods_CCSUDiningTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 815FAA52AE8476E51069AD9B /* Pods_CCSUDiningTests.framework */; };
+		65EC0C132231C74D00863EA4 /* adobe-garamond-pro in Resources */ = {isa = PBXBuildFile; fileRef = 65EC0C122231C74D00863EA4 /* adobe-garamond-pro */; };
 		9413FDEF812A7727855FA723 /* Pods_CCSUDining.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B851CBC3B0280550F95085 /* Pods_CCSUDining.framework */; };
 		E436A37F221FAE9D00F6142B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436A37E221FAE9D00F6142B /* AppDelegate.swift */; };
 		E436A381221FAE9D00F6142B /* DiningHallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436A380221FAE9D00F6142B /* DiningHallViewController.swift */; };
@@ -45,6 +46,7 @@
 
 /* Begin PBXFileReference section */
 		5DD19981BB8B05993471D8F0 /* Pods-CCSUDining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCSUDining.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCSUDining/Pods-CCSUDining.release.xcconfig"; sourceTree = "<group>"; };
+		65EC0C122231C74D00863EA4 /* adobe-garamond-pro */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "adobe-garamond-pro"; sourceTree = "<group>"; };
 		815FAA52AE8476E51069AD9B /* Pods_CCSUDiningTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCSUDiningTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DAFBBBE59BEEFCDE09A2E6D /* Pods-CCSUDiningTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCSUDiningTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCSUDiningTests/Pods-CCSUDiningTests.debug.xcconfig"; sourceTree = "<group>"; };
 		A1C66449C278988958BD9EE2 /* Pods-CCSUDiningUITests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCSUDiningUITests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCSUDiningUITests/Pods-CCSUDiningUITests.release.xcconfig"; sourceTree = "<group>"; };
@@ -113,6 +115,14 @@
 			name = Frameworks;
 			sourceTree = "<group>";
 		};
+		65EC0C0F2231C6D800863EA4 /* Fonts */ = {
+			isa = PBXGroup;
+			children = (
+				65EC0C122231C74D00863EA4 /* adobe-garamond-pro */,
+			);
+			path = Fonts;
+			sourceTree = "<group>";
+		};
 		8EB61784775237DBFA4B6B05 /* Pods */ = {
 			isa = PBXGroup;
 			children = (
@@ -129,6 +139,7 @@
 		E436A372221FAE9D00F6142B = {
 			isa = PBXGroup;
 			children = (
+				65EC0C0F2231C6D800863EA4 /* Fonts */,
 				E436A37D221FAE9D00F6142B /* CCSUDining */,
 				E436A394221FAE9E00F6142B /* CCSUDiningTests */,
 				E436A39F221FAE9E00F6142B /* CCSUDiningUITests */,
@@ -369,6 +380,7 @@
 				E436A38B221FAE9E00F6142B /* LaunchScreen.storyboard in Resources */,
 				E436A3AF221FAEEA00F6142B /* GoogleService-Info.plist in Resources */,
 				E436A388221FAE9E00F6142B /* Assets.xcassets in Resources */,
+				65EC0C132231C74D00863EA4 /* adobe-garamond-pro in Resources */,
 				E436A386221FAE9D00F6142B /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -667,7 +679,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DYD3VGU64Z;
+				DEVELOPMENT_TEAM = 83T3397TD7;
 				INFOPLIST_FILE = CCSUDining/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -687,7 +699,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = DYD3VGU64Z;
+				DEVELOPMENT_TEAM = 83T3397TD7;
 				INFOPLIST_FILE = CCSUDining/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
