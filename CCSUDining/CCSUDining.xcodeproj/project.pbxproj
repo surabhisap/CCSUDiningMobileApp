@@ -24,6 +24,10 @@
 		E436A3BD2224D61A00F6142B /* DinerHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436A3BC2224D61A00F6142B /* DinerHeaderCell.swift */; };
 		E436A3C02224D95500F6142B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436A3BF2224D95500F6142B /* APIManager.swift */; };
 		E436A3FC22266B6E00F6142B /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436A3FB22266B6E00F6142B /* MenuModel.swift */; };
+		E4B82A412230C1700041469A /* MenuViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B82A402230C1700041469A /* MenuViewController.swift */; };
+		E4B82A432230C2280041469A /* MenuViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B82A422230C2280041469A /* MenuViewModel.swift */; };
+		E4B82A452230C5610041469A /* MenuItemCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B82A442230C5610041469A /* MenuItemCell.swift */; };
+		E4B82A482230CED30041469A /* DinerViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B82A472230CED30041469A /* DinerViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -73,6 +77,10 @@
 		E436A3BC2224D61A00F6142B /* DinerHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinerHeaderCell.swift; sourceTree = "<group>"; };
 		E436A3BF2224D95500F6142B /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		E436A3FB22266B6E00F6142B /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		E4B82A402230C1700041469A /* MenuViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewController.swift; sourceTree = "<group>"; };
+		E4B82A422230C2280041469A /* MenuViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuViewModel.swift; sourceTree = "<group>"; };
+		E4B82A442230C5610041469A /* MenuItemCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuItemCell.swift; sourceTree = "<group>"; };
+		E4B82A472230CED30041469A /* DinerViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinerViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -198,6 +206,7 @@
 		E436A3B122247C4500F6142B /* ViewModel */ = {
 			isa = PBXGroup;
 			children = (
+				E4B82A422230C2280041469A /* MenuViewModel.swift */,
 			);
 			path = ViewModel;
 			sourceTree = "<group>";
@@ -213,6 +222,7 @@
 		E436A3B322247C4500F6142B /* View */ = {
 			isa = PBXGroup;
 			children = (
+				E4B82A442230C5610041469A /* MenuItemCell.swift */,
 			);
 			path = View;
 			sourceTree = "<group>";
@@ -220,6 +230,7 @@
 		E436A3B422247C4500F6142B /* ViewController */ = {
 			isa = PBXGroup;
 			children = (
+				E4B82A402230C1700041469A /* MenuViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -230,6 +241,7 @@
 				E436A380221FAE9D00F6142B /* DiningHallViewController.swift */,
 				E436A3B72224C86E00F6142B /* DiningHallCell.swift */,
 				E436A3BC2224D61A00F6142B /* DinerHeaderCell.swift */,
+				E4B82A462230CEC10041469A /* ViewModel */,
 			);
 			path = DiningHalls;
 			sourceTree = "<group>";
@@ -256,6 +268,14 @@
 				E436A3BF2224D95500F6142B /* APIManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E4B82A462230CEC10041469A /* ViewModel */ = {
+			isa = PBXGroup;
+			children = (
+				E4B82A472230CED30041469A /* DinerViewModel.swift */,
+			);
+			path = ViewModel;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -485,8 +505,12 @@
 			files = (
 				E436A3FC22266B6E00F6142B /* MenuModel.swift in Sources */,
 				E436A3BB2224CF7000F6142B /* CommonExtensions.swift in Sources */,
+				E4B82A452230C5610041469A /* MenuItemCell.swift in Sources */,
 				E436A3BD2224D61A00F6142B /* DinerHeaderCell.swift in Sources */,
+				E4B82A432230C2280041469A /* MenuViewModel.swift in Sources */,
+				E4B82A482230CED30041469A /* DinerViewModel.swift in Sources */,
 				E436A383221FAE9D00F6142B /* MyAccountViewController.swift in Sources */,
+				E4B82A412230C1700041469A /* MenuViewController.swift in Sources */,
 				E436A3B82224C86E00F6142B /* DiningHallCell.swift in Sources */,
 				E436A37F221FAE9D00F6142B /* AppDelegate.swift in Sources */,
 				E436A381221FAE9D00F6142B /* DiningHallViewController.swift in Sources */,
