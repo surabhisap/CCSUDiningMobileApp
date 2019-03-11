@@ -9,17 +9,30 @@
 import UIKit
 
 class DiningHallViewController: UIViewController {
-
-    var diningHallArray: [String]?
+    
+    let viewModel = DinerViewModel()
+    var diningHallArray = [String]()
+    var menuArray: [String: [MenuModel]]?
+    var selectedDinerIndex = 0
     @IBOutlet weak var diningTableView: UITableView!
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        APIManager.fetchCollection(collectionName: "2019-02-18")
+        viewModel.getMenuForToday(completionHandler: { (menuModelArray) in
+            self.menuArray = menuModelArray
+            self.diningHallArray = [String] (menuModelArray.keys)
+            self.diningTableView.reloadData()
+        })
     }
-
-
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        if segue.identifier == "menuSegue" {
+            if let destinationVC = segue.destination as? MenuViewController {
+                destinationVC.menuItemsArray = menuArray?[diningHallArray[selectedDinerIndex]]
+            }
+        }
+    }
 }
 
 
@@ -27,23 +40,30 @@ extension DiningHallViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return 4 //diningHallArray?.count
+        return diningHallArray.count
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCell(withIdentifier: "DiningHallCell", for: indexPath)
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "diningHallCell", for: indexPath) as? DiningHallCell else {
+            return UITableViewCell()
+        }
+        cell.dinerNameLabel.text = diningHallArray[indexPath.row]
         return cell
-        
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
         
-        let headerCell = tableView.dequeueReusableCell(withIdentifier: "HeaderCell")
+        let headerCell = tableView.dequeueReusableCell(withIdentifier: "headerCell")
         return headerCell
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
         return 50
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        selectedDinerIndex = indexPath.row
+        performSegue(withIdentifier: "menuSegue", sender: self)
     }
 }
