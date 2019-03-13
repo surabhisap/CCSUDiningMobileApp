@@ -6,6 +6,7 @@
 //
 
 import Foundation
+import FirebaseFirestore
 
 struct MenuModel: Codable {
     
@@ -26,4 +27,6 @@ struct MenuModel: Codable {
     var potassium: String?
     var portionSize: String?
     var number: String?
+    var meal: String?
+    var startTime: Timestamp?
 }
