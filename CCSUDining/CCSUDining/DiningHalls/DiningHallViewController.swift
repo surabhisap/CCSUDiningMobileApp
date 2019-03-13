@@ -29,7 +29,7 @@ class DiningHallViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "menuSegue" {
             if let destinationVC = segue.destination as? MenuViewController {
-                destinationVC.menuItemsArray = menuArray?[diningHallArray[selectedDinerIndex]]
+                destinationVC.menuItemsArray = menuArray?[diningHallArray[selectedDinerIndex]]?.group(by: { $0.meal ?? "" })
             }
         }
     }
@@ -48,7 +48,8 @@ extension DiningHallViewController: UITableViewDelegate, UITableViewDataSource {
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "diningHallCell", for: indexPath) as? DiningHallCell else {
             return UITableViewCell()
         }
-        cell.dinerNameLabel.text = diningHallArray[indexPath.row]
+        
+        cell.dinerNameLabel.text = DiningHallType(rawValue: diningHallArray[indexPath.row])?.hallName
         return cell
     }
     
@@ -66,4 +67,23 @@ extension DiningHallViewController: UITableViewDelegate, UITableViewDataSource {
         selectedDinerIndex = indexPath.row
         performSegue(withIdentifier: "menuSegue", sender: self)
     }
+}
+
+enum DiningHallType: String {
+    
+    case hilltop_cafe = "hilltop_cafe"
+    case memorial_hall = "memorial_hall"
+    case devils_den = "devils_den"
+    
+    var hallName: String {
+        switch self {
+        case .hilltop_cafe:
+            return "Hilltop Cafe"
+        case .memorial_hall:
+            return "Memorial Hall"
+        case .devils_den:
+            return "Devil's Den"
+        }
+    }
+    
 }

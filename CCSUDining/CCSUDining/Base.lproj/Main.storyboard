@@ -278,6 +278,33 @@
                                             <outlet property="searchBar" destination="yXe-Ez-eOo" id="X2b-N9-0BY"/>
                                         </connections>
                                     </tableViewCell>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuDefaultHeader" rowHeight="27" id="IeA-uL-o2v" customClass="MenuDefaultHeader" customModule="CCSUDining" customModuleProvider="target">
+                                        <rect key="frame" x="0.0" y="163" width="375" height="27"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IeA-uL-o2v" id="6BO-eb-efE">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="27"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Menu Header" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yx1-2T-Wi4">
+                                                    <rect key="frame" x="0.0" y="0.0" width="375" height="27"/>
+                                                    <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                    <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="16"/>
+                                                    <nil key="textColor"/>
+                                                    <nil key="highlightedColor"/>
+                                                </label>
+                                            </subviews>
+                                            <constraints>
+                                                <constraint firstAttribute="bottom" secondItem="Yx1-2T-Wi4" secondAttribute="bottom" id="SoX-HN-iMb"/>
+                                                <constraint firstItem="Yx1-2T-Wi4" firstAttribute="top" secondItem="6BO-eb-efE" secondAttribute="top" id="Y3X-Xb-C7h"/>
+                                                <constraint firstItem="Yx1-2T-Wi4" firstAttribute="leading" secondItem="6BO-eb-efE" secondAttribute="leading" id="ee8-tj-EMT"/>
+                                                <constraint firstAttribute="trailing" secondItem="Yx1-2T-Wi4" secondAttribute="trailing" id="ymg-mv-olW"/>
+                                            </constraints>
+                                        </tableViewCellContentView>
+                                        <color key="backgroundColor" red="0.92157727479934692" green="0.92155736684799194" blue="0.92156118154525757" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                        <connections>
+                                            <outlet property="headerTitle" destination="Yx1-2T-Wi4" id="cFe-nJ-Ihu"/>
+                                        </connections>
+                                    </tableViewCell>
                                 </prototypes>
                                 <connections>
                                     <outlet property="dataSource" destination="vPW-FY-KxK" id="bK0-Kf-dcG"/>
@@ -300,7 +327,7 @@
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YBP-mV-b4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2735" y="-548"/>
+            <point key="canvasLocation" x="2733.5999999999999" y="-548.27586206896558"/>
         </scene>
         <!--My Account-->
         <scene sceneID="wg7-f3-ORb">
