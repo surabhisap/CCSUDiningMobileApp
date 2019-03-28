@@ -9,22 +9,23 @@ import CodableFirebase
 import FirebaseFirestore
 
 class APIManager {
-    
+    // created shared instance
     static let shared = APIManager()
-    
+    // fetchCollection fetches the data from fireStore
     func fetchCollection(collectionName: String, completionHandler: @escaping (([String: [MenuModel]]) -> Void)) {
-        
+        // Get all documents for collectionName(date) collection
         Firestore.firestore().collection(collectionName).getDocuments()  { documentSnapShot, error in
             var menuModels = [MenuModel]()
             if let documents = documentSnapShot?.documents {
                 for document in documents {
-                    print("\(document.documentID) => \(document.data())")
+                    //Decode the data and populate MenuModel
                     let menuModel = try! FirestoreDecoder().decode(MenuModel.self, from: document.data())
                     if let formalName = menuModel.formalName, formalName.count > 0, let description = menuModel.description, description.count > 0 {
                         menuModels.append(menuModel)
                     }
                 }
 
+                //Group the menu models by Dining hall names eg. [["Memorial Hall": [menuModel1, menuModel2, ...,menuModeln], ["Devil's den": [menuModel5, menuModel6, ...,menuModelm] ]]
                 let groupedMenuModels = menuModels.group(by: { $0.dining_hall ?? "" })
                 completionHandler(groupedMenuModels)
             }
