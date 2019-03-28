@@ -170,7 +170,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="none" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="Osn-5n-smc">
-                                <rect key="frame" x="0.0" y="63" width="375" height="555"/>
+                                <rect key="frame" x="0.0" y="120" width="375" height="498"/>
                                 <color key="backgroundColor" red="0.88661960660000005" green="0.88661960660000005" blue="0.88661960660000005" alpha="0.59934182359999999" colorSpace="custom" customColorSpace="displayP3"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" insetsLayoutMarginsFromSafeArea="NO" selectionStyle="blue" hidesAccessoryWhenEditing="NO" indentationLevel="1" indentationWidth="0.0" reuseIdentifier="menuItemCell" rowHeight="85" id="Bi6-2y-pft" customClass="MenuItemCell" customModule="CCSUDining" customModuleProvider="target">
@@ -245,41 +245,8 @@
                                             <outlet property="totalCalories" destination="eoa-qQ-t9K" id="d2e-9z-6dM"/>
                                         </connections>
                                     </tableViewCell>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="headerCell" rowHeight="50" id="u7r-kf-04E" customClass="DinerHeaderCell" customModule="CCSUDining" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="113" width="375" height="50"/>
-                                        <autoresizingMask key="autoresizingMask"/>
-                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="u7r-kf-04E" id="RtK-fQ-WLM">
-                                            <rect key="frame" x="0.0" y="0.0" width="375" height="50"/>
-                                            <autoresizingMask key="autoresizingMask"/>
-                                            <subviews>
-                                                <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="yXe-Ez-eOo">
-                                                    <rect key="frame" x="0.0" y="0.0" width="315" height="50"/>
-                                                    <textInputTraits key="textInputTraits"/>
-                                                </searchBar>
-                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="JDB-yw-aUF">
-                                                    <rect key="frame" x="325" y="10" width="35" height="30"/>
-                                                    <state key="normal" title="Filter"/>
-                                                </button>
-                                            </subviews>
-                                            <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                            <constraints>
-                                                <constraint firstItem="JDB-yw-aUF" firstAttribute="leading" secondItem="yXe-Ez-eOo" secondAttribute="trailing" constant="10" id="KKq-Nv-7yq"/>
-                                                <constraint firstAttribute="bottom" secondItem="yXe-Ez-eOo" secondAttribute="bottom" id="M65-2N-Tcg"/>
-                                                <constraint firstAttribute="bottom" secondItem="JDB-yw-aUF" secondAttribute="bottom" constant="10" id="Mtt-p1-Luq"/>
-                                                <constraint firstAttribute="trailing" secondItem="JDB-yw-aUF" secondAttribute="trailing" constant="15" id="bRz-dB-jYq"/>
-                                                <constraint firstItem="JDB-yw-aUF" firstAttribute="top" secondItem="RtK-fQ-WLM" secondAttribute="top" constant="10" id="fqv-ER-4xS"/>
-                                                <constraint firstItem="yXe-Ez-eOo" firstAttribute="leading" secondItem="RtK-fQ-WLM" secondAttribute="leading" id="o93-Qf-51k"/>
-                                                <constraint firstItem="yXe-Ez-eOo" firstAttribute="top" secondItem="RtK-fQ-WLM" secondAttribute="top" id="wZz-zJ-BG0"/>
-                                            </constraints>
-                                        </tableViewCellContentView>
-                                        <color key="backgroundColor" red="0.92157477139999999" green="0.92155748609999999" blue="0.92156922819999998" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
-                                        <connections>
-                                            <outlet property="filterButton" destination="JDB-yw-aUF" id="HUF-lX-rhw"/>
-                                            <outlet property="searchBar" destination="yXe-Ez-eOo" id="X2b-N9-0BY"/>
-                                        </connections>
-                                    </tableViewCell>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MenuDefaultHeader" rowHeight="27" id="IeA-uL-o2v" customClass="MenuDefaultHeader" customModule="CCSUDining" customModuleProvider="target">
-                                        <rect key="frame" x="0.0" y="163" width="375" height="27"/>
+                                        <rect key="frame" x="0.0" y="113" width="375" height="27"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="IeA-uL-o2v" id="6BO-eb-efE">
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="27"/>
@@ -311,18 +278,30 @@
                                     <outlet property="delegate" destination="vPW-FY-KxK" id="w26-G5-d9U"/>
                                 </connections>
                             </tableView>
+                            <searchBar contentMode="redraw" translatesAutoresizingMaskIntoConstraints="NO" id="yXe-Ez-eOo">
+                                <rect key="frame" x="0.0" y="64" width="375" height="56"/>
+                                <textInputTraits key="textInputTraits"/>
+                                <connections>
+                                    <outlet property="delegate" destination="vPW-FY-KxK" id="twO-jS-mdo"/>
+                                </connections>
+                            </searchBar>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
+                            <constraint firstItem="yXe-Ez-eOo" firstAttribute="top" secondItem="vFD-ZY-oCC" secondAttribute="top" id="FJS-xB-f2t"/>
                             <constraint firstItem="Osn-5n-smc" firstAttribute="trailing" secondItem="vFD-ZY-oCC" secondAttribute="trailing" id="VJt-cq-kr1"/>
-                            <constraint firstItem="Osn-5n-smc" firstAttribute="top" secondItem="2hL-2F-PK5" secondAttribute="top" constant="63" id="hhY-xq-vuJ"/>
+                            <constraint firstItem="yXe-Ez-eOo" firstAttribute="leading" secondItem="vFD-ZY-oCC" secondAttribute="leading" id="WqO-fo-ga5"/>
+                            <constraint firstItem="yXe-Ez-eOo" firstAttribute="trailing" secondItem="vFD-ZY-oCC" secondAttribute="trailing" id="btL-gH-Y5K"/>
                             <constraint firstItem="Osn-5n-smc" firstAttribute="leading" secondItem="vFD-ZY-oCC" secondAttribute="leading" id="iBX-Ke-Gcd"/>
+                            <constraint firstItem="Osn-5n-smc" firstAttribute="top" secondItem="yXe-Ez-eOo" secondAttribute="bottom" id="jq2-tL-cs2"/>
                             <constraint firstItem="vFD-ZY-oCC" firstAttribute="bottom" secondItem="Osn-5n-smc" secondAttribute="bottom" id="wq3-QS-PTL"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="vFD-ZY-oCC"/>
                     </view>
                     <connections>
                         <outlet property="menuTableView" destination="Osn-5n-smc" id="dfG-ML-w4m"/>
+                        <outlet property="searchBar" destination="yXe-Ez-eOo" id="gV9-Q0-Ewb"/>
+                        <segue destination="0Cr-j5-gSh" kind="show" identifier="menudetail" id="HQU-rV-Qd6"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="YBP-mV-b4M" userLabel="First Responder" sceneMemberID="firstResponder"/>
@@ -402,6 +381,14 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="nOM-8M-0Ok" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="940" y="-545.57721139430294"/>
+        </scene>
+        <!--MenuDetail-->
+        <scene sceneID="Y3Z-bp-w6r">
+            <objects>
+                <viewControllerPlaceholder storyboardName="MenuDetail" id="0Cr-j5-gSh" sceneMemberID="viewController"/>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="saw-4X-luT" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="3382" y="-836"/>
         </scene>
     </scenes>
     <resources>

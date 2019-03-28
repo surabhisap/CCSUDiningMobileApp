@@ -29,4 +29,5 @@ struct MenuModel: Codable {
     var number: String?
     var meal: String?
     var startTime: Timestamp?
+    var endTime: Timestamp?
 }
