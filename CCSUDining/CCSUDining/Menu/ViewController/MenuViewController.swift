@@ -12,14 +12,18 @@ import UIKit
 class MenuViewController: UIViewController {
     
     var menuItemsArray: [String : [MenuModel]]?
-    let viewModel = MenuViewModel()
+    private var currentMenuItemsArray: [String : [MenuModel]]?
+    @IBOutlet weak var searchBar: UISearchBar!
+    private let viewModel = MenuViewModel()
     @IBOutlet weak var menuTableView: UITableView!
-    var menuSectionArray = [String]()
+    private var menuSectionArray = [String]()
+    private var previousSearchText: String?
+    private var currentSelectedIndex: IndexPath?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-
+        setUpSearchBar()
         menuSectionArray = [String] ((menuItemsArray?.keys)!)
         sortMenuArray()
     }
@@ -27,10 +31,31 @@ class MenuViewController: UIViewController {
     private func sortMenuArray() {
         
         for menu in menuSectionArray {
-            let sortedModels = menuItemsArray![menu]!.sorted(by: { $0.startTime?.compare($1.startTime!) == .orderedDescending })
+            let sortedModels = menuItemsArray![menu]!.sorted(by: { $0.startTime?.compare($1.startTime!) == .orderedAscending })
             menuItemsArray![menu] = sortedModels
         }
-       
+        currentMenuItemsArray = menuItemsArray
+        menuTableView.reloadData()
+    }
+    
+    private func setUpSearchBar() {
+        searchBar.delegate = self
+        searchBar.showsScopeBar = false // you can show/hide this dependant on your layout
+        searchBar.placeholder = "Search Menu by Name"
+    }
+    
+    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
+        
+        if segue.identifier == "menudetail" {
+            guard let detailMenuController = segue.destination as? MenuDetailViewController else {
+                return
+            }
+            
+            let section = menuSectionArray[currentSelectedIndex?.section ?? 0]
+            let menuItem = currentMenuItemsArray?[section]?[currentSelectedIndex?.row ?? 0]
+            detailMenuController.menuItem = menuItem
+            
+        }
     }
 }
 
@@ -47,7 +72,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
-        return menuItemsArray?[menuSectionArray[section]]?.count ?? 0
+        return currentMenuItemsArray?[menuSectionArray[section]]?.count ?? 0
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
@@ -56,7 +81,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        if let menuItem = menuItemsArray?[menuSectionArray[indexPath.section]]![indexPath.row], let menuItemName = menuItem.formalName, let menuItemDiscription = menuItem.description, let totalCalories = menuItem.calories {
+        if let menuItem = currentMenuItemsArray?[menuSectionArray[indexPath.section]]![indexPath.row], let menuItemName = menuItem.formalName, let menuItemDiscription = menuItem.description, let totalCalories = menuItem.calories {
             cell.menuName.text = menuItemName
             cell.menuDiscription.text = menuItemDiscription
             cell.totalCalories.text = "Calories \(totalCalories)"
@@ -67,12 +92,6 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
-        
-        /*if section == 0 {
-            let headerCell = tableView.dequeueReusableCell(withIdentifier: "headerCell")
-            return headerCell
-        }*/
-        
         guard let cell = tableView.dequeueReusableCell(withIdentifier: "MenuDefaultHeader") as? MenuDefaultHeader else {
             return UITableViewCell()
         }
@@ -82,9 +101,38 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, heightForHeaderInSection section: Int) -> CGFloat {
-        /*if section == 0 {
-            return 50
-        }*/
         return 40
+    }
+    
+    func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
+        currentSelectedIndex = indexPath
+        performSegue(withIdentifier: "menudetail", sender: self)
+    }
+}
+
+
+extension MenuViewController: UISearchBarDelegate {
+    
+    // Search Bar
+    func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
+        currentMenuItemsArray = menuItemsArray
+        updateMenuItems(searchText)
+        menuTableView.reloadData()
+        previousSearchText = searchText
+    }
+    
+    func searchBar(_ searchBar: UISearchBar, selectedScopeButtonIndexDidChange selectedScope: Int) {
+        
+    }
+    
+    private func updateMenuItems(_ searchText: String) {
+        if searchText.count <= 0 {
+            return
+        }
+        for (key, value) in currentMenuItemsArray! {
+            let filteredValue = value.filter({($0.formalName?
+                .localizedCaseInsensitiveContains(searchText))!})
+            currentMenuItemsArray![key] = filteredValue
+        }
     }
 }
