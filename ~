@@ -1,0 +1,319 @@
+Logon
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+#
+# On branch dev
+# Your branch is up to date with 'origin/dev'.
+#
+# Changes to be committed:
+#	new file:   .DS_Store
+#	new file:   CCSUDining/.DS_Store
+#	modified:   CCSUDining/CCSUDining.xcodeproj/project.pbxproj
+#	modified:   CCSUDining/CCSUDining.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/xcschememanagement.plist
+#	new file:   CCSUDining/CCSUDining.xcworkspace/xcuserdata/tommy.xcuserdatad/UserInterfaceState.xcuserstate
+#	new file:   CCSUDining/CCSUDining.xcworkspace/xcuserdata/tommy.xcuserdatad/xcdebugger/Breakpoints_v2.xcbkptlist
+#	new file:   CCSUDining/CCSUDining/.DS_Store
+#	renamed:    CCSUDining/CCSUDining/Assets.xcassets/Image.imageset/Contents.json -> CCSUDining/CCSUDining/Assets.xcassets/Welcome.imageset/Contents.json
+#	new file:   CCSUDining/CCSUDining/Assets.xcassets/Welcome.imageset/Welcome.png
+#	new file:   CCSUDining/CCSUDining/Assets.xcassets/Welcome.imageset/Welcome@2x.png
+#	new file:   CCSUDining/CCSUDining/Assets.xcassets/Welcome.imageset/Welcome@3x.png
+#	deleted:    CCSUDining/CCSUDining/Assets.xcassets/first.imageset/Contents.json
+#	deleted:    CCSUDining/CCSUDining/Assets.xcassets/first.imageset/first.pdf
+#	new file:   CCSUDining/CCSUDining/Assets.xcassets/profile_btn.imageset/Contents.json
+#	new file:   CCSUDining/CCSUDining/Assets.xcassets/profile_btn.imageset/settings_btn.png
+#	new file:   CCSUDining/CCSUDining/Assets.xcassets/profile_btn.imageset/settings_btn@2x.png
+#	new file:   CCSUDining/CCSUDining/Assets.xcassets/profile_btn.imageset/settings_btn@3x.png
+#	new file:   CCSUDining/CCSUDining/Assets.xcassets/profile_icon.imageset/Contents.json
+#	new file:   CCSUDining/CCSUDining/Assets.xcassets/profile_icon.imageset/profile_icon.png
+#	new file:   CCSUDining/CCSUDining/Assets.xcassets/profile_icon.imageset/profile_icon@2x.png
+#	new file:   CCSUDining/CCSUDining/Assets.xcassets/profile_icon.imageset/profile_icon@3x.png
+#	deleted:    CCSUDining/CCSUDining/Assets.xcassets/second.imageset/Contents.json
+#	deleted:    CCSUDining/CCSUDining/Assets.xcassets/second.imageset/second.pdf
+#	modified:   CCSUDining/CCSUDining/Base.lproj/Main.storyboard
+#	new file:   CCSUDining/CCSUDining/MyAccount/.DS_Store
+#	new file:   CCSUDining/CCSUDining/MyAccount/AccountSettingsTVC.swift
+#	new file:   CCSUDining/CCSUDining/MyAccount/MyAccountVC.swift
+#	deleted:    CCSUDining/CCSUDining/MyAccount/MyAccountViewController.swift
+#	new file:   CCSUDining/CCSUDining/MyAccount/PersonalDietVC.swift
+#	new file:   CCSUDining/CCSUDining/MyAccount/SignInVC.swift
+#	new file:   CCSUDining/CCSUDining/MyAccount/SignUpVC.swift
+#	new file:   CCSUDining/CCSUDining/MyAccount/WelcomeVC.swift
+#	new file:   CCSUDining/CCSUDining/MyAccount/signinPopUpVC.swift
+#	new file:   CCSUDining/CCSUDining/Utilities/Constants.swift
+#	modified:   CCSUDining/Podfile
+#	modified:   CCSUDining/Podfile.lock
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/CHANGELOG.md
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/README.md
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/EmailPassword/FIREmailAuthProvider.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/EmailPassword/FIREmailPasswordAuthCredential.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/EmailPassword/FIREmailPasswordAuthCredential.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/Facebook/FIRFacebookAuthCredential.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/Facebook/FIRFacebookAuthCredential.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/Facebook/FIRFacebookAuthProvider.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/GameCenter/FIRGameCenterAuthCredential.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/GameCenter/FIRGameCenterAuthCredential.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/GameCenter/FIRGameCenterAuthProvider.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/GitHub/FIRGitHubAuthCredential.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/GitHub/FIRGitHubAuthCredential.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/GitHub/FIRGitHubAuthProvider.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/Google/FIRGoogleAuthCredential.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/Google/FIRGoogleAuthCredential.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/Google/FIRGoogleAuthProvider.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/OAuth/FIROAuthCredential.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/OAuth/FIROAuthCredential.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/OAuth/FIROAuthProvider.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/Phone/FIRPhoneAuthCredential.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/Phone/FIRPhoneAuthCredential_Internal.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/Phone/FIRPhoneAuthProvider.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/Twitter/FIRTwitterAuthCredential.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/Twitter/FIRTwitterAuthCredential.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/AuthProviders/Twitter/FIRTwitterAuthProvider.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRActionCodeSettings.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAdditionalUserInfo.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAdditionalUserInfo_Internal.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuth.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAPNSToken.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAPNSToken.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAPNSTokenManager.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAPNSTokenManager.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAppCredential.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAppCredential.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAppCredentialManager.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAppCredentialManager.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAppDelegateProxy.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthAppDelegateProxy.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthCredential.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthCredential_Internal.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthDataResult.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthDataResult_Internal.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthDefaultUIDelegate.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthDefaultUIDelegate.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthDispatcher.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthDispatcher.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthErrorUtils.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthErrorUtils.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthExceptionUtils.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthExceptionUtils.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthGlobalWorkQueue.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthGlobalWorkQueue.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthInternalErrors.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthKeychain.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthKeychain.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthNotificationManager.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthNotificationManager.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthOperationType.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthProvider.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthSerialTaskQueue.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthSerialTaskQueue.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthSettings.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthTokenResult.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthTokenResult_Internal.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthURLPresenter.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthURLPresenter.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthUserDefaultsStorage.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthUserDefaultsStorage.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthWebUtils.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthWebUtils.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthWebView.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthWebView.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthWebViewController.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuthWebViewController.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRAuth_Internal.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRSecureTokenService.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRSecureTokenService.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRUser.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRUserInfoImpl.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRUserInfoImpl.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRUserMetadata.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRUserMetadata_Internal.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FIRUser_Internal.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/FirebaseAuthVersion.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/NSData+FIRBase64.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/NSData+FIRBase64.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRActionCodeSettings.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAdditionalUserInfo.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuth.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthAPNSTokenType.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthCredential.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthDataResult.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthErrors.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthSettings.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthTokenResult.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRAuthUIDelegate.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIREmailAuthProvider.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRFacebookAuthProvider.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRGameCenterAuthProvider.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRGitHubAuthProvider.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRGoogleAuthProvider.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIROAuthProvider.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRPhoneAuthCredential.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRPhoneAuthProvider.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRTwitterAuthProvider.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRUser.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRUserInfo.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FIRUserMetadata.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FirebaseAuth.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/Public/FirebaseAuthVersion.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRAuthBackend.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRAuthBackend.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRAuthRPCRequest.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRAuthRPCResponse.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRAuthRequestConfiguration.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRAuthRequestConfiguration.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRCreateAuthURIRequest.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRCreateAuthURIRequest.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRCreateAuthURIResponse.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRCreateAuthURIResponse.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRDeleteAccountRequest.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRDeleteAccountRequest.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRDeleteAccountResponse.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRDeleteAccountResponse.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIREmailLinkSignInRequest.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIREmailLinkSignInRequest.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIREmailLinkSignInResponse.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIREmailLinkSignInResponse.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRGetAccountInfoRequest.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRGetAccountInfoRequest.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRGetAccountInfoResponse.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRGetAccountInfoResponse.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRGetOOBConfirmationCodeRequest.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRGetOOBConfirmationCodeRequest.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRGetOOBConfirmationCodeResponse.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRGetOOBConfirmationCodeResponse.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRGetProjectConfigRequest.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRGetProjectConfigRequest.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRGetProjectConfigResponse.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRGetProjectConfigResponse.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRIdentityToolkitRequest.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRIdentityToolkitRequest.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRResetPasswordRequest.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRResetPasswordRequest.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRResetPasswordResponse.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRResetPasswordResponse.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSecureTokenRequest.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSecureTokenRequest.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSecureTokenResponse.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSecureTokenResponse.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSendVerificationCodeRequest.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSendVerificationCodeRequest.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSendVerificationCodeResponse.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSendVerificationCodeResponse.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSetAccountInfoRequest.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSetAccountInfoRequest.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSetAccountInfoResponse.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSetAccountInfoResponse.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSignInWithGameCenterRequest.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSignInWithGameCenterRequest.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSignInWithGameCenterResponse.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSignInWithGameCenterResponse.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSignUpNewUserRequest.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSignUpNewUserRequest.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSignUpNewUserResponse.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRSignUpNewUserResponse.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyAssertionRequest.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyAssertionRequest.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyAssertionResponse.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyAssertionResponse.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyClientRequest.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyClientRequest.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyClientResponse.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyClientResponse.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyCustomTokenRequest.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyCustomTokenRequest.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyCustomTokenResponse.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyCustomTokenResponse.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyPasswordRequest.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyPasswordRequest.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyPasswordResponse.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyPasswordResponse.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyPhoneNumberRequest.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyPhoneNumberRequest.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyPhoneNumberResponse.h
+#	new file:   CCSUDining/Pods/FirebaseAuth/Firebase/Auth/Source/RPCs/FIRVerifyPhoneNumberResponse.m
+#	new file:   CCSUDining/Pods/FirebaseAuth/LICENSE
+#	new file:   CCSUDining/Pods/FirebaseAuth/README.md
+#	new file:   CCSUDining/Pods/GTMSessionFetcher/LICENSE
+#	new file:   CCSUDining/Pods/GTMSessionFetcher/README.md
+#	new file:   CCSUDining/Pods/GTMSessionFetcher/Source/GTMSessionFetcher.h
+#	new file:   CCSUDining/Pods/GTMSessionFetcher/Source/GTMSessionFetcher.m
+#	new file:   CCSUDining/Pods/GTMSessionFetcher/Source/GTMSessionFetcherLogging.h
+#	new file:   CCSUDining/Pods/GTMSessionFetcher/Source/GTMSessionFetcherLogging.m
+#	new file:   CCSUDining/Pods/GTMSessionFetcher/Source/GTMSessionFetcherService.h
+#	new file:   CCSUDining/Pods/GTMSessionFetcher/Source/GTMSessionFetcherService.m
+#	new file:   CCSUDining/Pods/GTMSessionFetcher/Source/GTMSessionUploadFetcher.h
+#	new file:   CCSUDining/Pods/GTMSessionFetcher/Source/GTMSessionUploadFetcher.m
+#	modified:   CCSUDining/Pods/Manifest.lock
+#	modified:   CCSUDining/Pods/Pods.xcodeproj/project.pbxproj
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/BoringSSL-GRPC.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/CodableFirebase.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/Firebase.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/FirebaseAnalytics.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/FirebaseAuth.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/FirebaseAuthInterop.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/FirebaseCore.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/FirebaseDatabase.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/FirebaseFirestore.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/FirebaseInstanceID.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/GTMSessionFetcher.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/GoogleAppMeasurement.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/GoogleUtilities.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/Pods-CCSUDining.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/Pods-CCSUDiningTests.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/Pods-CCSUDiningUITests.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/Protobuf.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/gRPC-C++-gRPCCertificates.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/gRPC-C++.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/gRPC-Core.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/leveldb-library.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/nanopb.xcscheme
+#	new file:   CCSUDining/Pods/Pods.xcodeproj/xcuserdata/tommy.xcuserdatad/xcschemes/xcschememanagement.plist
+#	new file:   CCSUDining/Pods/Target Support Files/BoringSSL-GRPC/BoringSSL-GRPC-Info.plist
+#	new file:   CCSUDining/Pods/Target Support Files/CodableFirebase/CodableFirebase-Info.plist
+#	modified:   CCSUDining/Pods/Target Support Files/CodableFirebase/CodableFirebase.xcconfig
+#	new file:   CCSUDining/Pods/Target Support Files/Firebase/Firebase.xcconfig
+#	new file:   CCSUDining/Pods/Target Support Files/FirebaseAnalytics/FirebaseAnalytics.xcconfig
+#	new file:   CCSUDining/Pods/Target Support Files/FirebaseAuth/FirebaseAuth-Info.plist
+#	new file:   CCSUDining/Pods/Target Support Files/FirebaseAuth/FirebaseAuth-dummy.m
+#	new file:   CCSUDining/Pods/Target Support Files/FirebaseAuth/FirebaseAuth-umbrella.h
+#	new file:   CCSUDining/Pods/Target Support Files/FirebaseAuth/FirebaseAuth.modulemap
+#	new file:   CCSUDining/Pods/Target Support Files/FirebaseAuth/FirebaseAuth.xcconfig
+#	new file:   CCSUDining/Pods/Target Support Files/FirebaseAuthInterop/FirebaseAuthInterop.xcconfig
+#	new file:   CCSUDining/Pods/Target Support Files/FirebaseCore/FirebaseCore-Info.plist
+#	modified:   CCSUDining/Pods/Target Support Files/FirebaseCore/FirebaseCore.xcconfig
+#	new file:   CCSUDining/Pods/Target Support Files/FirebaseDatabase/FirebaseDatabase-Info.plist
+#	modified:   CCSUDining/Pods/Target Support Files/FirebaseDatabase/FirebaseDatabase.xcconfig
+#	new file:   CCSUDining/Pods/Target Support Files/FirebaseFirestore/FirebaseFirestore-Info.plist
+#	modified:   CCSUDining/Pods/Target Support Files/FirebaseFirestore/FirebaseFirestore.xcconfig
+#	new file:   CCSUDining/Pods/Target Support Files/FirebaseInstanceID/FirebaseInstanceID.xcconfig
+#	new file:   CCSUDining/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-Info.plist
+#	new file:   CCSUDining/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-dummy.m
+#	new file:   CCSUDining/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-prefix.pch
+#	new file:   CCSUDining/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher-umbrella.h
+#	new file:   CCSUDining/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher.modulemap
+#	new file:   CCSUDining/Pods/Target Support Files/GTMSessionFetcher/GTMSessionFetcher.xcconfig
+#	new file:   CCSUDining/Pods/Target Support Files/GoogleAppMeasurement/GoogleAppMeasurement.xcconfig
+#	new file:   CCSUDining/Pods/Target Support Files/GoogleUtilities/GoogleUtilities-Info.plist
+#	modified:   CCSUDining/Pods/Target Support Files/GoogleUtilities/GoogleUtilities.xcconfig
+#	new file:   CCSUDining/Pods/Target Support Files/Pods-CCSUDining/Pods-CCSUDining-Info.plist
+#	modified:   CCSUDining/Pods/Target Support Files/Pods-CCSUDining/Pods-CCSUDining-acknowledgements.markdown
+#	modified:   CCSUDining/Pods/Target Support Files/Pods-CCSUDining/Pods-CCSUDining-acknowledgements.plist
+#	modified:   CCSUDining/Pods/Target Support Files/Pods-CCSUDining/Pods-CCSUDining-frameworks.sh
+#	modified:   CCSUDining/Pods/Target Support Files/Pods-CCSUDining/Pods-CCSUDining.debug.xcconfig
+#	modified:   CCSUDining/Pods/Target Support Files/Pods-CCSUDining/Pods-CCSUDining.release.xcconfig
+#	new file:   CCSUDining/Pods/Target Support Files/Pods-CCSUDiningTests/Pods-CCSUDiningTests-Info.plist
+#	modified:   CCSUDining/Pods/Target Support Files/Pods-CCSUDiningTests/Pods-CCSUDiningTests.debug.xcconfig
+#	modified:   CCSUDining/Pods/Target Support Files/Pods-CCSUDiningTests/Pods-CCSUDiningTests.release.xcconfig
+#	new file:   CCSUDining/Pods/Target Support Files/Pods-CCSUDiningUITests/Pods-CCSUDiningUITests-Info.plist
+#	modified:   CCSUDining/Pods/Target Support Files/Pods-CCSUDiningUITests/Pods-CCSUDiningUITests.debug.xcconfig
+#	modified:   CCSUDining/Pods/Target Support Files/Pods-CCSUDiningUITests/Pods-CCSUDiningUITests.release.xcconfig
+#	new file:   CCSUDining/Pods/Target Support Files/Protobuf/Protobuf-Info.plist
+#	new file:   CCSUDining/Pods/Target Support Files/gRPC-C++/ResourceBundle-gRPCCertificates-gRPC-C++-Info.plist
+#	new file:   CCSUDining/Pods/Target Support Files/gRPC-C++/gRPC-C++-Info.plist
+#	modified:   CCSUDining/Pods/Target Support Files/gRPC-C++/gRPC-C++.xcconfig
+#	new file:   CCSUDining/Pods/Target Support Files/gRPC-Core/gRPC-Core-Info.plist
+#	modified:   CCSUDining/Pods/Target Support Files/gRPC-Core/gRPC-Core.xcconfig
+#	new file:   CCSUDining/Pods/Target Support Files/leveldb-library/leveldb-library-Info.plist
+#	modified:   CCSUDining/Pods/Target Support Files/leveldb-library/leveldb-library.xcconfig
+#	new file:   CCSUDining/Pods/Target Support Files/nanopb/nanopb-Info.plist
+#	modified:   README.md
+#
