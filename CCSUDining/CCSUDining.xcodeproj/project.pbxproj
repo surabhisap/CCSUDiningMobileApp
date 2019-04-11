@@ -26,6 +26,9 @@
 		E436A3BD2224D61A00F6142B /* DinerHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436A3BC2224D61A00F6142B /* DinerHeaderCell.swift */; };
 		E436A3C02224D95500F6142B /* APIManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436A3BF2224D95500F6142B /* APIManager.swift */; };
 		E436A3FC22266B6E00F6142B /* MenuModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436A3FB22266B6E00F6142B /* MenuModel.swift */; };
+		E43AE1102255B69900E54F5B /* MenuFilterCustomHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43AE10F2255B69900E54F5B /* MenuFilterCustomHeaderCell.swift */; };
+		E44DE71F22531A6B00C5D4AA /* MenuFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DE71E22531A6B00C5D4AA /* MenuFilterViewController.swift */; };
+		E44DE72122531B6500C5D4AA /* MenuFIlterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DE72022531B6500C5D4AA /* MenuFIlterCell.swift */; };
 		E4B316D8224C6E560074D243 /* MenuDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B316D7224C6E560074D243 /* MenuDetailViewController.swift */; };
 		E4B316DA224C6EB10074D243 /* MenuDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B316D9224C6EB10074D243 /* MenuDetail.storyboard */; };
 		E4B316DC224C73130074D243 /* MenuDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B316DB224C73130074D243 /* MenuDetailCell.swift */; };
@@ -84,6 +87,9 @@
 		E436A3BC2224D61A00F6142B /* DinerHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinerHeaderCell.swift; sourceTree = "<group>"; };
 		E436A3BF2224D95500F6142B /* APIManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APIManager.swift; sourceTree = "<group>"; };
 		E436A3FB22266B6E00F6142B /* MenuModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuModel.swift; sourceTree = "<group>"; };
+		E43AE10F2255B69900E54F5B /* MenuFilterCustomHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFilterCustomHeaderCell.swift; sourceTree = "<group>"; };
+		E44DE71E22531A6B00C5D4AA /* MenuFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFilterViewController.swift; sourceTree = "<group>"; };
+		E44DE72022531B6500C5D4AA /* MenuFIlterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFIlterCell.swift; sourceTree = "<group>"; };
 		E4B316D7224C6E560074D243 /* MenuDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailViewController.swift; sourceTree = "<group>"; };
 		E4B316D9224C6EB10074D243 /* MenuDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuDetail.storyboard; sourceTree = "<group>"; };
 		E4B316DB224C73130074D243 /* MenuDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailCell.swift; sourceTree = "<group>"; };
@@ -214,6 +220,7 @@
 		E436A3B022247C4500F6142B /* Menu */ = {
 			isa = PBXGroup;
 			children = (
+				E44DE71D22531A5500C5D4AA /* MenuFilter */,
 				E4B316D6224C6E440074D243 /* MenuDetail */,
 				E436A3B122247C4500F6142B /* ViewModel */,
 				E436A3B222247C4500F6142B /* Model */,
@@ -289,6 +296,16 @@
 				E436A3BF2224D95500F6142B /* APIManager.swift */,
 			);
 			path = Services;
+			sourceTree = "<group>";
+		};
+		E44DE71D22531A5500C5D4AA /* MenuFilter */ = {
+			isa = PBXGroup;
+			children = (
+				E44DE71E22531A6B00C5D4AA /* MenuFilterViewController.swift */,
+				E44DE72022531B6500C5D4AA /* MenuFIlterCell.swift */,
+				E43AE10F2255B69900E54F5B /* MenuFilterCustomHeaderCell.swift */,
+			);
+			path = MenuFilter;
 			sourceTree = "<group>";
 		};
 		E4B316D6224C6E440074D243 /* MenuDetail */ = {
@@ -539,11 +556,14 @@
 				E436A3FC22266B6E00F6142B /* MenuModel.swift in Sources */,
 				E436A3BB2224CF7000F6142B /* CommonExtensions.swift in Sources */,
 				E4B82A452230C5610041469A /* MenuItemCell.swift in Sources */,
+				E44DE71F22531A6B00C5D4AA /* MenuFilterViewController.swift in Sources */,
 				E436A3BD2224D61A00F6142B /* DinerHeaderCell.swift in Sources */,
 				E4B316DC224C73130074D243 /* MenuDetailCell.swift in Sources */,
 				E4B82A432230C2280041469A /* MenuViewModel.swift in Sources */,
 				E4B82A482230CED30041469A /* DinerViewModel.swift in Sources */,
+				E43AE1102255B69900E54F5B /* MenuFilterCustomHeaderCell.swift in Sources */,
 				E436A383221FAE9D00F6142B /* MyAccountViewController.swift in Sources */,
+				E44DE72122531B6500C5D4AA /* MenuFIlterCell.swift in Sources */,
 				E4B82A412230C1700041469A /* MenuViewController.swift in Sources */,
 				E436A3B82224C86E00F6142B /* DiningHallCell.swift in Sources */,
 				E436A37F221FAE9D00F6142B /* AppDelegate.swift in Sources */,
@@ -729,7 +749,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N37YJ3DPQM;
+				DEVELOPMENT_TEAM = DYD3VGU64Z;
 				INFOPLIST_FILE = CCSUDining/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -749,7 +769,7 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = N37YJ3DPQM;
+				DEVELOPMENT_TEAM = DYD3VGU64Z;
 				INFOPLIST_FILE = CCSUDining/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.0;
 				LD_RUNPATH_SEARCH_PATHS = (

@@ -11,7 +11,7 @@ import Foundation
 class DinerViewModel {
     
     func getMenuForToday(completionHandler: @escaping (([String: [MenuModel]]) -> Void)) {
-        APIManager.shared.fetchCollection(collectionName: "2019-03-18", completionHandler: completionHandler)
+        APIManager.shared.fetchCollection(collectionName: "2019-04-10", completionHandler: completionHandler)
     }
     
 }

@@ -2,7 +2,7 @@
 //  MenuDefaultHeader.swift
 //  CCSUDining
 //
-//  Created by Anurag Pandey on 3/12/19.
+//  Created by Surabhi Agnihotri on 3/12/19.
 //  Copyright © 2019 CCSU. All rights reserved.
 //
 

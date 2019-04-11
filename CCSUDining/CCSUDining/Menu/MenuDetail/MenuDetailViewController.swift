@@ -2,7 +2,7 @@
 //  MenuDetailViewController.swift
 //  CCSUDining
 //
-//  Created by Anurag Pandey on 3/27/19.
+//  Created by Surabhi Agnihotri on 3/27/19.
 //  Copyright © 2019 CCSU. All rights reserved.
 //
 
