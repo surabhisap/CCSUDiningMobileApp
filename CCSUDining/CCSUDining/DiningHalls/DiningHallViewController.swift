@@ -12,7 +12,7 @@ class DiningHallViewController: UIViewController {
     
     let viewModel = DinerViewModel()
     var diningHallArray = [String]()
-    var menuArray: [String: [MenuModel]]?
+    var menuArray = [String: [MenuModel]]()
     var selectedDinerIndex = 0
     @IBOutlet weak var diningTableView: UITableView!
     
@@ -29,7 +29,10 @@ class DiningHallViewController: UIViewController {
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "menuSegue" {
             if let destinationVC = segue.destination as? MenuViewController {
-                destinationVC.menuItemsArray = menuArray?[diningHallArray[selectedDinerIndex]]?.group(by: { $0.meal ?? "" })
+                
+                if let menuArray = menuArray[diningHallArray[selectedDinerIndex]]?.group(by: { $0.meal ?? "" }) {
+                    destinationVC.menuItemsArray = menuArray
+                }
             }
         }
     }
