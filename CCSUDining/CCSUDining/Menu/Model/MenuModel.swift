@@ -10,6 +10,7 @@ import FirebaseFirestore
 
 struct MenuModel: Codable {
     
+    var allergens: Allergerns?
     var dining_hall: String?
     var formalName: String?
     var description: String?
@@ -30,4 +31,15 @@ struct MenuModel: Codable {
     var meal: String?
     var startTime: Timestamp?
     var endTime: Timestamp?
+    var isVegan: Bool?
+    var isVegetarian: Bool?
+    var isMindful: Bool?
+}
+
+struct Allergerns: Codable {
+    var Eggs: Bool?
+    var Gluten: Bool?
+    var Milk: Bool?
+    var Soybean: Bool?
+    var Wheat: Bool?
 }
