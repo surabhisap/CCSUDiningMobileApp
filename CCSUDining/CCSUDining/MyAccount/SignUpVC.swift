@@ -15,6 +15,7 @@ class SignUpVC: UIViewController {
     @IBOutlet weak var txtPassword: UITextField!
     @IBOutlet weak var btnSignUp: UIButton!
     @IBOutlet weak var btnCancel: UIButton!
+    @IBOutlet weak var lblError: UILabel!
     
     
     
@@ -31,19 +32,18 @@ class SignUpVC: UIViewController {
         Auth.auth().createUser(withEmail: email, password: pwd) { (user, error) in
             
             if let error = error {
-                debugPrint("Error Creating User: \(error.localizedDescription)")
+                self.lblError.text = error.localizedDescription
             }
             
             //let changeRequest = Auth.auth().currentUser?.createProfileChangeRequest()
             guard let userID = Auth.auth().currentUser?.uid else {return}
-            
             Firestore.firestore().collection(USERS_REF).document(userID).setData([
                 USERNAME : email,
                 DATE_CREATED: FieldValue.serverTimestamp()
                 
                 ], completion: { (error) in
                     if let error = error {
-                        debugPrint(error.localizedDescription)
+                        self.lblError.text = error.localizedDescription
                     } else {
                         self.dismiss(animated: true, completion: nil)
                     }

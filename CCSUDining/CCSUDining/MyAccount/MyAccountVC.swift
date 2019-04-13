@@ -10,11 +10,12 @@ import UIKit
 import Firebase
 
 
+
 class MyAccountVC: UIViewController {
     
     @IBOutlet weak var lblGreeting: UILabel!
     private var handle: AuthStateDidChangeListenerHandle?
-    
+
     override func viewDidLoad() {
         super.viewDidLoad()
 
@@ -22,6 +23,7 @@ class MyAccountVC: UIViewController {
     }
     
     override func viewDidAppear(_ animated: Bool) {
+        let db = Firestore.firestore()
         handle = Auth.auth().addStateDidChangeListener({ (auth, user) in
             if user == nil {
                 //let storyboard = UIStoryboard(name: "Main", bundle: nil)
@@ -31,23 +33,18 @@ class MyAccountVC: UIViewController {
                 self.lblGreeting.isHidden = true
             }
             else {
-                let email = Auth.auth().currentUser?.email
-                self.lblGreeting.text = "Hello, \(email ?? "Person")"
+                let appUser = db.collection(USERS_REF).document(Auth.auth().currentUser!.uid)
+                appUser.getDocument { (document, error) in
+                    if let document = document, document.exists {
+                        self.lblGreeting.text = "Hello, \(document.data()?[FIRST_NAME] ?? document.data()?[USERNAME] ?? "Hacker")"
+                    }
+                }
+                
             }
-
         })
     }
 
-    
-    @IBAction func btnLogOutTapped(_ sender: Any) {
-        
-        do {
-            try Auth.auth().signOut()
-        }
-        catch let signoutError as NSError {
-            debugPrint("error: \(signoutError) " )
-        }
-    }
+
     
     /*
     // MARK: - Navigation

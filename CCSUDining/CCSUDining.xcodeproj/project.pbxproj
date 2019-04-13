@@ -10,12 +10,12 @@
 		0C35B59D9CA3DC758476C640 /* Pods_CCSUDiningUITests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = CDE2DEE332F64B69A556F637 /* Pods_CCSUDiningUITests.framework */; };
 		39C1B467F9E24A27300AC03E /* Pods_CCSUDiningTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 815FAA52AE8476E51069AD9B /* Pods_CCSUDiningTests.framework */; };
 		656C1661223D6E420077EBCB /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 656C1660223D6E420077EBCB /* Constants.swift */; };
-		658805672246BAA50025E3C9 /* PersonalDietVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658805662246BAA50025E3C9 /* PersonalDietVC.swift */; };
 		658805712247B2080025E3C9 /* AccountSettingsTVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 658805702247B2080025E3C9 /* AccountSettingsTVC.swift */; };
 		65AF2970224C4D8A002BD8B5 /* SignUpVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF296E224C4D8A002BD8B5 /* SignUpVC.swift */; };
 		65AF2971224C4D8A002BD8B5 /* SignInVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF296F224C4D8A002BD8B5 /* SignInVC.swift */; };
 		65AF2973224CF425002BD8B5 /* WelcomeVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF2972224CF425002BD8B5 /* WelcomeVC.swift */; };
 		65AF2975224CF85A002BD8B5 /* MyAccountVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65AF2974224CF85A002BD8B5 /* MyAccountVC.swift */; };
+		65CE879E2261678400073E57 /* ChangeNameVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 65CE879D2261678400073E57 /* ChangeNameVC.swift */; };
 		65EC0C132231C74D00863EA4 /* adobe-garamond-pro in Resources */ = {isa = PBXBuildFile; fileRef = 65EC0C122231C74D00863EA4 /* adobe-garamond-pro */; };
 		9413FDEF812A7727855FA723 /* Pods_CCSUDining.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B851CBC3B0280550F95085 /* Pods_CCSUDining.framework */; };
 		E436A37F221FAE9D00F6142B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436A37E221FAE9D00F6142B /* AppDelegate.swift */; };
@@ -57,12 +57,12 @@
 /* Begin PBXFileReference section */
 		5DD19981BB8B05993471D8F0 /* Pods-CCSUDining.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCSUDining.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCSUDining/Pods-CCSUDining.release.xcconfig"; sourceTree = "<group>"; };
 		656C1660223D6E420077EBCB /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
-		658805662246BAA50025E3C9 /* PersonalDietVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDietVC.swift; sourceTree = "<group>"; };
 		658805702247B2080025E3C9 /* AccountSettingsTVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AccountSettingsTVC.swift; sourceTree = "<group>"; };
 		65AF296E224C4D8A002BD8B5 /* SignUpVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVC.swift; sourceTree = "<group>"; };
 		65AF296F224C4D8A002BD8B5 /* SignInVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignInVC.swift; sourceTree = "<group>"; };
 		65AF2972224CF425002BD8B5 /* WelcomeVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = WelcomeVC.swift; sourceTree = "<group>"; };
 		65AF2974224CF85A002BD8B5 /* MyAccountVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountVC.swift; sourceTree = "<group>"; };
+		65CE879D2261678400073E57 /* ChangeNameVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChangeNameVC.swift; sourceTree = "<group>"; };
 		65EC0C122231C74D00863EA4 /* adobe-garamond-pro */ = {isa = PBXFileReference; lastKnownFileType = folder; path = "adobe-garamond-pro"; sourceTree = "<group>"; };
 		815FAA52AE8476E51069AD9B /* Pods_CCSUDiningTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCSUDiningTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		8DAFBBBE59BEEFCDE09A2E6D /* Pods-CCSUDiningTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCSUDiningTests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCSUDiningTests/Pods-CCSUDiningTests.debug.xcconfig"; sourceTree = "<group>"; };
@@ -283,10 +283,10 @@
 			children = (
 				65AF296F224C4D8A002BD8B5 /* SignInVC.swift */,
 				65AF296E224C4D8A002BD8B5 /* SignUpVC.swift */,
-				658805662246BAA50025E3C9 /* PersonalDietVC.swift */,
 				658805702247B2080025E3C9 /* AccountSettingsTVC.swift */,
 				65AF2972224CF425002BD8B5 /* WelcomeVC.swift */,
 				65AF2974224CF85A002BD8B5 /* MyAccountVC.swift */,
+				65CE879D2261678400073E57 /* ChangeNameVC.swift */,
 			);
 			path = MyAccount;
 			sourceTree = "<group>";
@@ -545,9 +545,9 @@
 			files = (
 				E436A3FC22266B6E00F6142B /* MenuModel.swift in Sources */,
 				E436A3BB2224CF7000F6142B /* CommonExtensions.swift in Sources */,
+				65CE879E2261678400073E57 /* ChangeNameVC.swift in Sources */,
 				65AF2975224CF85A002BD8B5 /* MyAccountVC.swift in Sources */,
 				E4B82A452230C5610041469A /* MenuItemCell.swift in Sources */,
-				658805672246BAA50025E3C9 /* PersonalDietVC.swift in Sources */,
 				E436A3BD2224D61A00F6142B /* DinerHeaderCell.swift in Sources */,
 				E4B82A432230C2280041469A /* MenuViewModel.swift in Sources */,
 				E4B82A482230CED30041469A /* DinerViewModel.swift in Sources */,
