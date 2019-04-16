@@ -63,6 +63,9 @@ class MenuFilterViewController: UIViewController {
         }
     }
     
+    @IBAction func closeAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 extension MenuFilterViewController: UICollectionViewDelegate, UICollectionViewDataSource {
