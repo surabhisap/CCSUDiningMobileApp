@@ -63,7 +63,7 @@ extension DiningHallViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.dinerNameLabel.text = DiningHallType(rawValue: diningHallArray[indexPath.row])?.hallName
         cell.addReviewButton.addTarget(self, action: #selector(addReviewAction), for: .touchUpInside)
-        cell.dinerRatingView.rating = 0 // update rating from api call
+        // update rating from api call
         return cell
     }
     

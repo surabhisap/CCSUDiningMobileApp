@@ -21,9 +21,7 @@ class DinerReviewsViewController: UIViewController {
         super.viewDidLoad()
         
         self.title = "Add Reviews for \(dinnerName ?? "")"
-        cosmosView.settings.starSize = 50
-        cosmosView.rating = 0
-        
+        cosmosView.settings.starSize = 50        
     }
     
     @IBAction func submitRatingAction(_ sender: Any) {
