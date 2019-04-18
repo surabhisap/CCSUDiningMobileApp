@@ -12,6 +12,7 @@ target 'CCSUDining' do
     pod 'Firebase/Firestore'
     pod 'Firebase/Database'
     pod 'Firebase/Auth'
+    pod 'Cosmos', '~> 18.0'
 
   target 'CCSUDiningTests' do
     inherit! :search_paths

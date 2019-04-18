@@ -11,6 +11,9 @@
 		39C1B467F9E24A27300AC03E /* Pods_CCSUDiningTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 815FAA52AE8476E51069AD9B /* Pods_CCSUDiningTests.framework */; };
 		65EC0C132231C74D00863EA4 /* adobe-garamond-pro in Resources */ = {isa = PBXBuildFile; fileRef = 65EC0C122231C74D00863EA4 /* adobe-garamond-pro */; };
 		9413FDEF812A7727855FA723 /* Pods_CCSUDining.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B851CBC3B0280550F95085 /* Pods_CCSUDining.framework */; };
+		C70832E62268D8560037BAFD /* DinerReviews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C70832E42268D8560037BAFD /* DinerReviews.storyboard */; };
+		C70832E72268D8560037BAFD /* DinerReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70832E52268D8560037BAFD /* DinerReviewsViewController.swift */; };
+		C70832E92268DB2A0037BAFD /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = C70832E82268DB2A0037BAFD /* Alert.swift */; };
 		C7D1449D2238AD1200D3B915 /* MenuDefaultHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1449C2238AD1200D3B915 /* MenuDefaultHeader.swift */; };
 		E436A37F221FAE9D00F6142B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436A37E221FAE9D00F6142B /* AppDelegate.swift */; };
 		E436A381221FAE9D00F6142B /* DiningHallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436A380221FAE9D00F6142B /* DiningHallViewController.swift */; };
@@ -72,6 +75,9 @@
 		BE1D5EB0BDDE91AECF5695EA /* Pods-CCSUDiningTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCSUDiningTests.release.xcconfig"; path = "Pods/Target Support Files/Pods-CCSUDiningTests/Pods-CCSUDiningTests.release.xcconfig"; sourceTree = "<group>"; };
 		BE44754D95A16A11EE8A88E4 /* Pods-CCSUDiningUITests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCSUDiningUITests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCSUDiningUITests/Pods-CCSUDiningUITests.debug.xcconfig"; sourceTree = "<group>"; };
 		C30FFA598313FE57DE783382 /* Pods-CCSUDining.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCSUDining.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCSUDining/Pods-CCSUDining.debug.xcconfig"; sourceTree = "<group>"; };
+		C70832E42268D8560037BAFD /* DinerReviews.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = DinerReviews.storyboard; sourceTree = "<group>"; };
+		C70832E52268D8560037BAFD /* DinerReviewsViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = DinerReviewsViewController.swift; sourceTree = "<group>"; };
+		C70832E82268DB2A0037BAFD /* Alert.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		C7D1449C2238AD1200D3B915 /* MenuDefaultHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDefaultHeader.swift; sourceTree = "<group>"; };
 		CDE2DEE332F64B69A556F637 /* Pods_CCSUDiningUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCSUDiningUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E436A37B221FAE9D00F6142B /* CCSUDining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCSUDining.app; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -172,6 +178,16 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
+		C70832E32268D8560037BAFD /* Reviews */ = {
+			isa = PBXGroup;
+			children = (
+				C70832E42268D8560037BAFD /* DinerReviews.storyboard */,
+				C70832E52268D8560037BAFD /* DinerReviewsViewController.swift */,
+			);
+			name = Reviews;
+			path = CCSUDining/Reviews;
+			sourceTree = SOURCE_ROOT;
+		};
 		E436A372221FAE9D00F6142B = {
 			isa = PBXGroup;
 			children = (
@@ -203,6 +219,7 @@
 				E436A3B62224C84200F6142B /* MyAccount */,
 				E436A3B52224C81800F6142B /* DiningHalls */,
 				E436A3B022247C4500F6142B /* Menu */,
+				C70832E32268D8560037BAFD /* Reviews */,
 				E436A3BE2224D94000F6142B /* Services */,
 				E436A384221FAE9D00F6142B /* Main.storyboard */,
 				E436A387221FAE9E00F6142B /* Assets.xcassets */,
@@ -306,6 +323,7 @@
 		E436A3B92224CF4300F6142B /* Common */ = {
 			isa = PBXGroup;
 			children = (
+				C70832E82268DB2A0037BAFD /* Alert.swift */,
 				E436A3BA2224CF7000F6142B /* CommonExtensions.swift */,
 			);
 			path = Common;
@@ -460,6 +478,7 @@
 				E436A3AF221FAEEA00F6142B /* GoogleService-Info.plist in Resources */,
 				E47209F72267E77B0057D9EB /* SignUp.storyboard in Resources */,
 				E436A388221FAE9E00F6142B /* Assets.xcassets in Resources */,
+				C70832E62268D8560037BAFD /* DinerReviews.storyboard in Resources */,
 				65EC0C132231C74D00863EA4 /* adobe-garamond-pro in Resources */,
 				E436A386221FAE9D00F6142B /* Main.storyboard in Resources */,
 			);
@@ -524,9 +543,10 @@
 			files = (
 			);
 			inputPaths = (
-				"${SRCROOT}/Pods/Target Support Files/Pods-CCSUDining/Pods-CCSUDining-frameworks.sh",
+				"${PODS_ROOT}/Target Support Files/Pods-CCSUDining/Pods-CCSUDining-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
+				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
 				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
@@ -539,6 +559,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
@@ -549,7 +570,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CCSUDining/Pods-CCSUDining-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CCSUDining/Pods-CCSUDining-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F5A6CE48614C496AFA4E4454 /* [CP] Check Pods Manifest.lock */ = {
@@ -593,7 +614,9 @@
 				E436A383221FAE9D00F6142B /* SignUpOptionsViewController.swift in Sources */,
 				E44DE72122531B6500C5D4AA /* MenuFIlterCell.swift in Sources */,
 				E47209FF2267FD880057D9EB /* SettingsViewController.swift in Sources */,
+				C70832E72268D8560037BAFD /* DinerReviewsViewController.swift in Sources */,
 				E4B82A412230C1700041469A /* MenuViewController.swift in Sources */,
+				C70832E92268DB2A0037BAFD /* Alert.swift in Sources */,
 				E47209FD2267F2510057D9EB /* SignInViewController.swift in Sources */,
 				E436A3B82224C86E00F6142B /* DiningHallCell.swift in Sources */,
 				E436A37F221FAE9D00F6142B /* AppDelegate.swift in Sources */,
