@@ -12,7 +12,6 @@ import UIKit
 class MenuViewController: UIViewController {
     
     var menuItemsArray = [String : [MenuModel]]()
-    var dinerName: String?
     private var currentMenuItemsArray = [String : [MenuModel]]() {
         willSet {
             menuSectionArray = [String] ((newValue.keys))
@@ -28,7 +27,6 @@ class MenuViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         // Do any additional setup after loading the view, typically from a nib.
-        title = "\(dinerName ?? "") Menu" 
         setUpSearchBar()
         menuSectionArray = [String] ((menuItemsArray.keys))
         sortMenuArray()

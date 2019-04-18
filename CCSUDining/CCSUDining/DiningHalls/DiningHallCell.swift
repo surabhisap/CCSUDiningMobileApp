@@ -8,21 +8,12 @@
 
 import Foundation
 import UIKit
-import Cosmos
 
 class DiningHallCell: UITableViewCell {
     
      @IBOutlet weak var dinerImageView: UIImageView!
      @IBOutlet weak var dinerNameLabel: UILabel!
      @IBOutlet weak var dinerDescription: UILabel!
-     @IBOutlet weak var dinerRatingView: CosmosView!
-     @IBOutlet weak var addReviewButton: UIButton!
- 
-    
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        
-        dinerRatingView.rating = 3
-    }
+     @IBOutlet weak var dinerRatings: UILabel!
     
 }
