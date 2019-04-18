@@ -30,20 +30,11 @@ class DiningHallViewController: UIViewController {
         if segue.identifier == "menuSegue" {
             if let destinationVC = segue.destination as? MenuViewController {
                 
-                destinationVC.dinerName = DiningHallType(rawValue: diningHallArray[selectedDinerIndex])?.hallName
                 if let menuArray = menuArray[diningHallArray[selectedDinerIndex]]?.group(by: { $0.meal ?? "" }) {
                     destinationVC.menuItemsArray = menuArray
                 }
             }
-        } else  if segue.identifier == "dinerReviews" {
-            if let destinationVC = segue.destination as? DinerReviewsViewController {
-                destinationVC.dinnerName = DiningHallType(rawValue: diningHallArray[selectedDinerIndex])?.hallName
-            }
         }
-    }
-    
-    @objc private func addReviewAction () {
-        performSegue(withIdentifier: "dinerReviews", sender: self)
     }
 }
 
@@ -62,8 +53,6 @@ extension DiningHallViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         cell.dinerNameLabel.text = DiningHallType(rawValue: diningHallArray[indexPath.row])?.hallName
-        cell.addReviewButton.addTarget(self, action: #selector(addReviewAction), for: .touchUpInside)
-        // update rating from api call
         return cell
     }
     

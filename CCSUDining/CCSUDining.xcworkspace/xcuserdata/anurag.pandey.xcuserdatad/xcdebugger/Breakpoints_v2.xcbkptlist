@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CCSUDining/Menu/ViewController/MenuViewController.swift"
-            timestampString = "577082262.651549"
+            timestampString = "576639209.705755"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
+            startingLineNumber = "232"
+            endingLineNumber = "232"
             landmarkName = "searchBar(_:textDidChange:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,7 +26,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CCSUDining/Menu/MenuDetail/MenuDetailViewController.swift"
-            timestampString = "576637261.623608"
+            timestampString = "577240021.103652"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "22"
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CCSUDining/Menu/ViewController/MenuViewController.swift"
-            timestampString = "577082262.651705"
+            timestampString = "576639209.706298"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "88"
-            endingLineNumber = "88"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "filterAndReload(filterDictionary:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CCSUDining/Menu/ViewController/MenuViewController.swift"
-            timestampString = "577082262.651758"
+            timestampString = "576639209.7066031"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "38"
-            endingLineNumber = "38"
+            startingLineNumber = "36"
+            endingLineNumber = "36"
             landmarkName = "viewDidDisappear(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,13 +74,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CCSUDining/Menu/ViewController/MenuViewController.swift"
-            timestampString = "577082262.651803"
+            timestampString = "576639209.706882"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "118"
-            endingLineNumber = "118"
+            startingLineNumber = "116"
+            endingLineNumber = "116"
             landmarkName = "filterAndReload(filterDictionary:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CCSUDining/MyAccount/SettingsViewController.swift"
+            timestampString = "577251186.548023"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "32"
+            endingLineNumber = "32"
+            landmarkName = "fetchUserDetais()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "CCSUDining.SettingsViewController.(fetchUserDetais in _ACD9F0F7752683BB4F6A6710D518C890)() -&gt; ()"
+                  moduleName = "CCSUDining"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anurag.pandey/Downloads/CCSUDining%202/CCSUDining/MyAccount/SettingsViewController.swift"
+                  timestampString = "577244117.025573"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "298">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in CCSUDining.SettingsViewController.(fetchUserDetais in _ACD9F0F7752683BB4F6A6710D518C890)() -&gt; ()"
+                  moduleName = "CCSUDining"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/anurag.pandey/Downloads/CCSUDining%202/CCSUDining/MyAccount/SettingsViewController.swift"
+                  timestampString = "577244117.02895"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "36"
+                  endingLineNumber = "36"
+                  offsetFromSymbolStart = "61">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

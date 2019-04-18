@@ -12,12 +12,9 @@
 		65EC0C132231C74D00863EA4 /* adobe-garamond-pro in Resources */ = {isa = PBXBuildFile; fileRef = 65EC0C122231C74D00863EA4 /* adobe-garamond-pro */; };
 		9413FDEF812A7727855FA723 /* Pods_CCSUDining.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = B0B851CBC3B0280550F95085 /* Pods_CCSUDining.framework */; };
 		C7D1449D2238AD1200D3B915 /* MenuDefaultHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1449C2238AD1200D3B915 /* MenuDefaultHeader.swift */; };
-		E42721A1226580F9003C7854 /* DinerReviews.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E42721A0226580F9003C7854 /* DinerReviews.storyboard */; };
-		E42721A32265811C003C7854 /* DinerReviewsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42721A22265811C003C7854 /* DinerReviewsViewController.swift */; };
-		E42721A522658CF7003C7854 /* Alert.swift in Sources */ = {isa = PBXBuildFile; fileRef = E42721A422658CF7003C7854 /* Alert.swift */; };
 		E436A37F221FAE9D00F6142B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436A37E221FAE9D00F6142B /* AppDelegate.swift */; };
 		E436A381221FAE9D00F6142B /* DiningHallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436A380221FAE9D00F6142B /* DiningHallViewController.swift */; };
-		E436A383221FAE9D00F6142B /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436A382221FAE9D00F6142B /* MyAccountViewController.swift */; };
+		E436A383221FAE9D00F6142B /* SignUpOptionsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436A382221FAE9D00F6142B /* SignUpOptionsViewController.swift */; };
 		E436A386221FAE9D00F6142B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E436A384221FAE9D00F6142B /* Main.storyboard */; };
 		E436A388221FAE9E00F6142B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E436A387221FAE9E00F6142B /* Assets.xcassets */; };
 		E436A38B221FAE9E00F6142B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E436A389221FAE9E00F6142B /* LaunchScreen.storyboard */; };
@@ -32,6 +29,13 @@
 		E43AE1102255B69900E54F5B /* MenuFilterCustomHeaderCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43AE10F2255B69900E54F5B /* MenuFilterCustomHeaderCell.swift */; };
 		E44DE71F22531A6B00C5D4AA /* MenuFilterViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DE71E22531A6B00C5D4AA /* MenuFilterViewController.swift */; };
 		E44DE72122531B6500C5D4AA /* MenuFIlterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E44DE72022531B6500C5D4AA /* MenuFIlterCell.swift */; };
+		E47209F72267E77B0057D9EB /* SignUp.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E47209F62267E77B0057D9EB /* SignUp.storyboard */; };
+		E47209F92267ECFA0057D9EB /* SignUpViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47209F82267ECFA0057D9EB /* SignUpViewController.swift */; };
+		E47209FB2267EF6C0057D9EB /* MyAccountViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47209FA2267EF6C0057D9EB /* MyAccountViewController.swift */; };
+		E47209FD2267F2510057D9EB /* SignInViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47209FC2267F2510057D9EB /* SignInViewController.swift */; };
+		E47209FF2267FD880057D9EB /* SettingsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E47209FE2267FD880057D9EB /* SettingsViewController.swift */; };
+		E4720A01226800350057D9EB /* SettingsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4720A00226800350057D9EB /* SettingsCell.swift */; };
+		E4720A032268044F0057D9EB /* SettingsFooterCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4720A022268044F0057D9EB /* SettingsFooterCell.swift */; };
 		E4B316D8224C6E560074D243 /* MenuDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B316D7224C6E560074D243 /* MenuDetailViewController.swift */; };
 		E4B316DA224C6EB10074D243 /* MenuDetail.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E4B316D9224C6EB10074D243 /* MenuDetail.storyboard */; };
 		E4B316DC224C73130074D243 /* MenuDetailCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E4B316DB224C73130074D243 /* MenuDetailCell.swift */; };
@@ -70,13 +74,10 @@
 		C30FFA598313FE57DE783382 /* Pods-CCSUDining.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-CCSUDining.debug.xcconfig"; path = "Pods/Target Support Files/Pods-CCSUDining/Pods-CCSUDining.debug.xcconfig"; sourceTree = "<group>"; };
 		C7D1449C2238AD1200D3B915 /* MenuDefaultHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDefaultHeader.swift; sourceTree = "<group>"; };
 		CDE2DEE332F64B69A556F637 /* Pods_CCSUDiningUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCSUDiningUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
-		E42721A0226580F9003C7854 /* DinerReviews.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = DinerReviews.storyboard; sourceTree = "<group>"; };
-		E42721A22265811C003C7854 /* DinerReviewsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DinerReviewsViewController.swift; sourceTree = "<group>"; };
-		E42721A422658CF7003C7854 /* Alert.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Alert.swift; sourceTree = "<group>"; };
 		E436A37B221FAE9D00F6142B /* CCSUDining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCSUDining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E436A37E221FAE9D00F6142B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		E436A380221FAE9D00F6142B /* DiningHallViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DiningHallViewController.swift; sourceTree = "<group>"; };
-		E436A382221FAE9D00F6142B /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+		E436A382221FAE9D00F6142B /* SignUpOptionsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpOptionsViewController.swift; sourceTree = "<group>"; };
 		E436A385221FAE9D00F6142B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		E436A387221FAE9E00F6142B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		E436A38A221FAE9E00F6142B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -96,6 +97,13 @@
 		E43AE10F2255B69900E54F5B /* MenuFilterCustomHeaderCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFilterCustomHeaderCell.swift; sourceTree = "<group>"; };
 		E44DE71E22531A6B00C5D4AA /* MenuFilterViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFilterViewController.swift; sourceTree = "<group>"; };
 		E44DE72022531B6500C5D4AA /* MenuFIlterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuFIlterCell.swift; sourceTree = "<group>"; };
+		E47209F62267E77B0057D9EB /* SignUp.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = SignUp.storyboard; sourceTree = "<group>"; };
+		E47209F82267ECFA0057D9EB /* SignUpViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignUpViewController.swift; sourceTree = "<group>"; };
+		E47209FA2267EF6C0057D9EB /* MyAccountViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MyAccountViewController.swift; sourceTree = "<group>"; };
+		E47209FC2267F2510057D9EB /* SignInViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SignInViewController.swift; sourceTree = "<group>"; };
+		E47209FE2267FD880057D9EB /* SettingsViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsViewController.swift; sourceTree = "<group>"; };
+		E4720A00226800350057D9EB /* SettingsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsCell.swift; sourceTree = "<group>"; };
+		E4720A022268044F0057D9EB /* SettingsFooterCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SettingsFooterCell.swift; sourceTree = "<group>"; };
 		E4B316D7224C6E560074D243 /* MenuDetailViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailViewController.swift; sourceTree = "<group>"; };
 		E4B316D9224C6EB10074D243 /* MenuDetail.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = MenuDetail.storyboard; sourceTree = "<group>"; };
 		E4B316DB224C73130074D243 /* MenuDetailCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDetailCell.swift; sourceTree = "<group>"; };
@@ -164,15 +172,6 @@
 			name = Pods;
 			sourceTree = "<group>";
 		};
-		E427219F226580E3003C7854 /* Reviews */ = {
-			isa = PBXGroup;
-			children = (
-				E42721A0226580F9003C7854 /* DinerReviews.storyboard */,
-				E42721A22265811C003C7854 /* DinerReviewsViewController.swift */,
-			);
-			path = Reviews;
-			sourceTree = "<group>";
-		};
 		E436A372221FAE9D00F6142B = {
 			isa = PBXGroup;
 			children = (
@@ -205,7 +204,6 @@
 				E436A3B52224C81800F6142B /* DiningHalls */,
 				E436A3B022247C4500F6142B /* Menu */,
 				E436A3BE2224D94000F6142B /* Services */,
-				E427219F226580E3003C7854 /* Reviews */,
 				E436A384221FAE9D00F6142B /* Main.storyboard */,
 				E436A387221FAE9E00F6142B /* Assets.xcassets */,
 				E436A389221FAE9E00F6142B /* LaunchScreen.storyboard */,
@@ -293,7 +291,14 @@
 		E436A3B62224C84200F6142B /* MyAccount */ = {
 			isa = PBXGroup;
 			children = (
-				E436A382221FAE9D00F6142B /* MyAccountViewController.swift */,
+				E436A382221FAE9D00F6142B /* SignUpOptionsViewController.swift */,
+				E47209F82267ECFA0057D9EB /* SignUpViewController.swift */,
+				E47209FA2267EF6C0057D9EB /* MyAccountViewController.swift */,
+				E47209FC2267F2510057D9EB /* SignInViewController.swift */,
+				E47209FE2267FD880057D9EB /* SettingsViewController.swift */,
+				E4720A00226800350057D9EB /* SettingsCell.swift */,
+				E4720A022268044F0057D9EB /* SettingsFooterCell.swift */,
+				E47209F62267E77B0057D9EB /* SignUp.storyboard */,
 			);
 			path = MyAccount;
 			sourceTree = "<group>";
@@ -302,7 +307,6 @@
 			isa = PBXGroup;
 			children = (
 				E436A3BA2224CF7000F6142B /* CommonExtensions.swift */,
-				E42721A422658CF7003C7854 /* Alert.swift */,
 			);
 			path = Common;
 			sourceTree = "<group>";
@@ -454,8 +458,8 @@
 				E4B316DA224C6EB10074D243 /* MenuDetail.storyboard in Resources */,
 				E436A38B221FAE9E00F6142B /* LaunchScreen.storyboard in Resources */,
 				E436A3AF221FAEEA00F6142B /* GoogleService-Info.plist in Resources */,
+				E47209F72267E77B0057D9EB /* SignUp.storyboard in Resources */,
 				E436A388221FAE9E00F6142B /* Assets.xcassets in Resources */,
-				E42721A1226580F9003C7854 /* DinerReviews.storyboard in Resources */,
 				65EC0C132231C74D00863EA4 /* adobe-garamond-pro in Resources */,
 				E436A386221FAE9D00F6142B /* Main.storyboard in Resources */,
 			);
@@ -520,10 +524,10 @@
 			files = (
 			);
 			inputPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-CCSUDining/Pods-CCSUDining-frameworks.sh",
+				"${SRCROOT}/Pods/Target Support Files/Pods-CCSUDining/Pods-CCSUDining-frameworks.sh",
 				"${BUILT_PRODUCTS_DIR}/BoringSSL-GRPC/openssl_grpc.framework",
 				"${BUILT_PRODUCTS_DIR}/CodableFirebase/CodableFirebase.framework",
-				"${BUILT_PRODUCTS_DIR}/Cosmos/Cosmos.framework",
+				"${BUILT_PRODUCTS_DIR}/GTMSessionFetcher/GTMSessionFetcher.framework",
 				"${BUILT_PRODUCTS_DIR}/GoogleUtilities/GoogleUtilities.framework",
 				"${BUILT_PRODUCTS_DIR}/Protobuf/Protobuf.framework",
 				"${BUILT_PRODUCTS_DIR}/gRPC-C++/grpcpp.framework",
@@ -535,7 +539,7 @@
 			outputPaths = (
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/openssl_grpc.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/CodableFirebase.framework",
-				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Cosmos.framework",
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GTMSessionFetcher.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/GoogleUtilities.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Protobuf.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/grpcpp.framework",
@@ -545,7 +549,7 @@
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-CCSUDining/Pods-CCSUDining-frameworks.sh\"\n";
+			shellScript = "\"${SRCROOT}/Pods/Target Support Files/Pods-CCSUDining/Pods-CCSUDining-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F5A6CE48614C496AFA4E4454 /* [CP] Check Pods Manifest.lock */ = {
@@ -573,6 +577,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				E4720A01226800350057D9EB /* SettingsCell.swift in Sources */,
 				E436A3FC22266B6E00F6142B /* MenuModel.swift in Sources */,
 				E436A3BB2224CF7000F6142B /* CommonExtensions.swift in Sources */,
 				E4B82A452230C5610041469A /* MenuItemCell.swift in Sources */,
@@ -580,18 +585,21 @@
 				E436A3BD2224D61A00F6142B /* DinerHeaderCell.swift in Sources */,
 				E4B316DC224C73130074D243 /* MenuDetailCell.swift in Sources */,
 				E4B82A432230C2280041469A /* MenuViewModel.swift in Sources */,
+				E47209F92267ECFA0057D9EB /* SignUpViewController.swift in Sources */,
+				E47209FB2267EF6C0057D9EB /* MyAccountViewController.swift in Sources */,
 				E4B82A482230CED30041469A /* DinerViewModel.swift in Sources */,
+				E4720A032268044F0057D9EB /* SettingsFooterCell.swift in Sources */,
 				E43AE1102255B69900E54F5B /* MenuFilterCustomHeaderCell.swift in Sources */,
-				E436A383221FAE9D00F6142B /* MyAccountViewController.swift in Sources */,
+				E436A383221FAE9D00F6142B /* SignUpOptionsViewController.swift in Sources */,
 				E44DE72122531B6500C5D4AA /* MenuFIlterCell.swift in Sources */,
+				E47209FF2267FD880057D9EB /* SettingsViewController.swift in Sources */,
 				E4B82A412230C1700041469A /* MenuViewController.swift in Sources */,
+				E47209FD2267F2510057D9EB /* SignInViewController.swift in Sources */,
 				E436A3B82224C86E00F6142B /* DiningHallCell.swift in Sources */,
 				E436A37F221FAE9D00F6142B /* AppDelegate.swift in Sources */,
 				C7D1449D2238AD1200D3B915 /* MenuDefaultHeader.swift in Sources */,
-				E42721A32265811C003C7854 /* DinerReviewsViewController.swift in Sources */,
 				E436A381221FAE9D00F6142B /* DiningHallViewController.swift in Sources */,
 				E4B316D8224C6E560074D243 /* MenuDetailViewController.swift in Sources */,
-				E42721A522658CF7003C7854 /* Alert.swift in Sources */,
 				E436A3C02224D95500F6142B /* APIManager.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
