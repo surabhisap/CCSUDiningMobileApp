@@ -36,9 +36,9 @@ def updateMenuData (menu):
             db.collection(str(days['date'])[:10]).document(str(items['menuItemId'])).set(items)
     return True
 
-cred = credentials.Certificate('/users/tommy/keys/ccsu.json')
+cred = credentials.Certificate('./db_key.json')
 firebase_admin.initialize_app(cred)
-date ='02/25/2019'
+date ='04/17/2019'
 
 devils_den = 'https://menus.sodexomyway.com/BiteMenu/MenuOnly?menuId=16669&locationId=32736&whereami=http://ccsudining.sodexomyway.com/dining-near-me/devils-den&startDate=' + date
 hilltop_cafe = 'https://menus.sodexomyway.com/BiteMenu/MenuOnly?menuId=15271&locationId=32736006&whereami=http://ccsudining.sodexomyway.com/dining-near-me/hilltop-cafe&startDate=' + date
