@@ -7,32 +7,44 @@
 //
 
 import UIKit
+import Firebase
+import CodableFirebase
 
 class DiningHallViewController: UIViewController {
     
+    @IBOutlet weak var diningTableView: UITableView!
     let viewModel = DinerViewModel()
     var diningHallArray = [String]()
     var menuArray = [String: [MenuModel]]()
     var selectedDinerIndex = 0
-    @IBOutlet weak var diningTableView: UITableView!
+    private var dinerRatingDictionary = [String: String]()
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
-        viewModel.getMenuForToday(completionHandler: { (menuModelArray) in
-            self.menuArray = menuModelArray
-            self.diningHallArray = [String] (menuModelArray.keys)
-            self.diningTableView.reloadData()
+        
+        viewModel.getMenuForToday(completionHandler: { [weak self] (menuModelArray) in
+            self?.menuArray = menuModelArray
+            self?.diningHallArray = [String] (menuModelArray.keys)
+            
+            APIManager.shared.fetchDinerRatings(completionHandler: { [weak self] (dinerRatingDictionary) in
+                self?.dinerRatingDictionary = dinerRatingDictionary
+                self?.diningTableView.reloadData()
+            })
         })
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "menuSegue" {
-            if let destinationVC = segue.destination as? MenuViewController {
+            if let menuViewController = segue.destination as? MenuViewController {
                 
                 if let menuArray = menuArray[diningHallArray[selectedDinerIndex]]?.group(by: { $0.meal ?? "" }) {
-                    destinationVC.menuItemsArray = menuArray
+                    menuViewController.menuItemsArray = menuArray
                 }
+            }
+        } else if segue.identifier == "dinerReviews" {
+            if let dinerReviewsViewController = segue.destination as? DinerReviewsViewController {
+                dinerReviewsViewController.dinerName = diningHallArray[selectedDinerIndex]
+                dinerReviewsViewController.dinerRating = dinerRatingDictionary[diningHallArray[selectedDinerIndex]] ?? "0"
             }
         }
     }
@@ -40,6 +52,7 @@ class DiningHallViewController: UIViewController {
     @objc private func addReviewAction () {
         performSegue(withIdentifier: "dinerReviews", sender: self)
     }
+
 }
 
 
@@ -58,6 +71,8 @@ extension DiningHallViewController: UITableViewDelegate, UITableViewDataSource {
         
         cell.dinerNameLabel.text = DiningHallType(rawValue: diningHallArray[indexPath.row])?.hallName
         cell.addReviewButton.addTarget(self, action: #selector(addReviewAction), for: .touchUpInside)
+        cell.dinerRatingView.rating = Double(dinerRatingDictionary[diningHallArray[indexPath.row]]!)!
+        
         return cell
     }
     
@@ -77,7 +92,7 @@ extension DiningHallViewController: UITableViewDelegate, UITableViewDataSource {
     }
 }
 
-enum DiningHallType: String {
+enum DiningHallType: String, CaseIterable {
     
     case hilltop_cafe = "hilltop_cafe"
     case memorial_hall = "memorial_hall"

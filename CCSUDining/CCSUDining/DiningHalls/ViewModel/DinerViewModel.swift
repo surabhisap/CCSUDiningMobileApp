@@ -14,7 +14,6 @@ class DinerViewModel {
         let dateFormatter = DateFormatter()
         dateFormatter.dateFormat = "YYYY-MM-dd"
         let currentDate = dateFormatter.string(from: Date())
-        APIManager.shared.fetchCollection(collectionName: currentDate, completionHandler: completionHandler)
+        APIManager.shared.fetchCollection(collectionName: "2019-04-20", completionHandler: completionHandler)
     }
-    
 }
