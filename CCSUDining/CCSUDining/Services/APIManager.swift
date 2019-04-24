@@ -11,10 +11,12 @@ import FirebaseFirestore
 class APIManager {
     // created shared instance
     static let shared = APIManager()
+    private var db: Firestore = Firestore.firestore()
+
     // fetchCollection fetches the data from fireStore
     func fetchCollection(collectionName: String, completionHandler: @escaping (([String: [MenuModel]]) -> Void)) {
         // Get all documents for collectionName(date) collection
-        Firestore.firestore().collection(collectionName).getDocuments()  { documentSnapShot, error in
+        db.collection(collectionName).getDocuments()  { documentSnapShot, error in
             var menuModels = [MenuModel]()
             if let documents = documentSnapShot?.documents {
                 for document in documents {
@@ -28,6 +30,50 @@ class APIManager {
                 //Group the menu models by Dining hall names eg. [["Memorial Hall": [menuModel1, menuModel2, ...,menuModeln], ["Devil's den": [menuModel5, menuModel6, ...,menuModelm] ]]
                 let groupedMenuModels = menuModels.group(by: { $0.dining_hall ?? "" })
                 completionHandler(groupedMenuModels)
+            }
+        }
+    }
+    
+    func fetchDinerRatings(completionHandler: @escaping (([String: String]) -> Void)) {
+        
+        var dinerRatingDictionary = [String: String]()
+        db.collection("DiningHalls").getDocuments { (snapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in snapshot!.documents {
+                    let dinerName = document.documentID
+                    var totalRating = 0
+                    if let reviewsArray = document.data()["reviews"] as? [[String: String]] {
+                        for review in reviewsArray  {
+                            if let rating = Int(review["rating"] ?? "0") {
+                                totalRating += rating
+                            }
+                        }
+                        if reviewsArray.count > 0 {
+                            totalRating = totalRating / reviewsArray.count
+                        }
+                    }
+                    dinerRatingDictionary[dinerName] = "\(totalRating)"
+                }
+                completionHandler(dinerRatingDictionary)
+            }
+        }
+    }
+    
+    func fetchDinerReviews(completionHandler: @escaping (([String: ReviewsModel]) -> Void)) {
+        
+        var dinerReviewsDictionary = [String: ReviewsModel]()
+        db.collection("DiningHalls").getDocuments { (snapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                for document in snapshot!.documents {
+                    let dinerModel = try! FirestoreDecoder().decode(ReviewsModel.self, from: document.data())
+                    let dinerName = document.documentID
+                    dinerReviewsDictionary[dinerName] = dinerModel
+                }
+                completionHandler(dinerReviewsDictionary)
             }
         }
     }
