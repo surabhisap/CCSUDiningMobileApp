@@ -50,6 +50,7 @@ extension ViewDinerReviews: UITableViewDataSource, UITableViewDelegate {
         if let selectedDiner = selectedDiner, let dinerReviews = dinerReviews[selectedDiner]?.reviews  {
             cell.reviewTitle.text = dinerReviews[indexPath.row].reviewTitle
             cell.reviewComment.text = dinerReviews[indexPath.row].reviewComment
+            cell.ratingCosmosView.rating = Double(dinerReviews[indexPath.row].rating ?? "3") ?? 3
         }
         return cell
     }
