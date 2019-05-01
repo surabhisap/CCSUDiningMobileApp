@@ -14,7 +14,7 @@ class DiningHallCell: UITableViewCell {
     
     @IBOutlet weak var dinerImageView: UIImageView!
     @IBOutlet weak var dinerNameLabel: UILabel!
-    @IBOutlet weak var dinerDescription: UILabel!
+    @IBOutlet weak var locateDinerButton: UIButton!
     @IBOutlet weak var dinerRatingView: CosmosView!
     @IBOutlet weak var addReviewButton: UIButton!
     
