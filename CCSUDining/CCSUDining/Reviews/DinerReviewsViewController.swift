@@ -16,6 +16,7 @@ class DinerReviewsViewController: UIViewController {
     @IBOutlet weak var ratingTitle: InspectableUITextField!
     var dinerName: String?
     var dinerRating = "3"
+    var closure: (() -> Void)?
     
     @IBOutlet weak var ratingDescription: InspectableUITextView!
     private var db: Firestore!
@@ -39,6 +40,8 @@ class DinerReviewsViewController: UIViewController {
         if cosmosView.rating > 0 {
             submitReview()
             navigationController?.popViewController(animated: true)
+            guard let closure = closure else {return}
+            closure()
         } else {
             Alert.shared.showAlert(title: "Please add your review", message: nil, on: self)
         }
@@ -64,5 +67,24 @@ class DinerReviewsViewController: UIViewController {
             }
             viewReviewsVC.selectedDiner = dinerName
         }
+    }
+}
+
+extension DinerReviewsViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
+}
+
+extension DinerReviewsViewController: UITextViewDelegate {
+    
+    func textView(_ textView: UITextView, shouldChangeTextIn range: NSRange, replacementText text: String) -> Bool {
+        if(text == "\n") {
+            textView.resignFirstResponder()
+            return false
+        }
+        return true
     }
 }

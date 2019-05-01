@@ -34,33 +34,6 @@ class APIManager {
         }
     }
     
-    func fetchDinerRatings(completionHandler: @escaping (([String: String]) -> Void)) {
-        
-        var dinerRatingDictionary = [String: String]()
-        db.collection("DiningHalls").getDocuments { (snapshot, err) in
-            if let err = err {
-                print("Error getting documents: \(err)")
-            } else {
-                for document in snapshot!.documents {
-                    let dinerName = document.documentID
-                    var totalRating = 0
-                    if let reviewsArray = document.data()["reviews"] as? [[String: String]] {
-                        for review in reviewsArray  {
-                            if let rating = Int(review["rating"] ?? "0") {
-                                totalRating += rating
-                            }
-                        }
-                        if reviewsArray.count > 0 {
-                            totalRating = totalRating / reviewsArray.count
-                        }
-                    }
-                    dinerRatingDictionary[dinerName] = "\(totalRating)"
-                }
-                completionHandler(dinerRatingDictionary)
-            }
-        }
-    }
-    
     func fetchDinerReviews(completionHandler: @escaping (([String: ReviewsModel]) -> Void)) {
         
         var dinerReviewsDictionary = [String: ReviewsModel]()
@@ -75,6 +48,20 @@ class APIManager {
                 }
                 completionHandler(dinerReviewsDictionary)
             }
+        }
+    }
+    
+    func fetchDummyDate(completionHandler: @escaping ((Any?) -> Void)) {
+        
+        db.collection("StaticData").getDocuments { (snapshot, err) in
+            if let err = err {
+                print("Error getting documents: \(err)")
+            } else {
+                guard let snapshot = snapshot else {
+                    return completionHandler("")
+                }
+                completionHandler(snapshot.documents.first?.data().values.first)
+           }
         }
     }
     
