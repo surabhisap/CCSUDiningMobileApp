@@ -23,6 +23,7 @@ class MenuViewController: UIViewController {
     private var menuSectionArray = [String]()
     private var previousSearchText: String?
     private var currentSelectedIndex: IndexPath?
+    var currentUser: UserModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -34,7 +35,7 @@ class MenuViewController: UIViewController {
     
     override func viewDidDisappear(_ animated: Bool) {
         super.viewDidDisappear(animated)
-        currentMenuItemsArray = menuItemsArray
+
     }
     
     private func sortMenuArray() {
@@ -59,7 +60,7 @@ class MenuViewController: UIViewController {
             guard let detailMenuController = segue.destination as? MenuDetailViewController else {
                 return
             }
-            
+           
             let section = menuSectionArray[currentSelectedIndex?.section ?? 0]
             let menuItem = currentMenuItemsArray[section]?[currentSelectedIndex?.row ?? 0]
             detailMenuController.menuItem = menuItem
@@ -86,8 +87,8 @@ class MenuViewController: UIViewController {
             if  let dishesArray = filterDictionary["dishes"] as? [String], dishesArray.contains("Vegan") {
                 currentMenuItemsArray[key] = veganFilter(modelArray: models)
             }
-            if   let dishesArray = filterDictionary["dishes"] as? [String], dishesArray.contains("Vegitarian") {
-                currentMenuItemsArray[key] = vegitarianFilter(modelArray: models)
+            if   let dishesArray = filterDictionary["dishes"] as? [String], dishesArray.contains("Vegetarian") {
+                currentMenuItemsArray[key] = VegetarianFilter(modelArray: models)
             }
             if  let dishesArray = filterDictionary["dishes"] as? [String], dishesArray.contains("Mindful") {
                 currentMenuItemsArray[key] = mindfulFilter(modelArray: models)
@@ -115,7 +116,7 @@ class MenuViewController: UIViewController {
         }
         
         self.menuTableView.reloadData()
-
+        
     }
     
     private func filterByCalories(caloriesCount: Int64, modelArray: [MenuModel]) -> [MenuModel] {
@@ -130,7 +131,7 @@ class MenuViewController: UIViewController {
         })
     }
     
-    private func vegitarianFilter(modelArray: [MenuModel]) -> [MenuModel] {
+    private func VegetarianFilter(modelArray: [MenuModel]) -> [MenuModel] {
         return modelArray.filter({ model -> Bool in
             model.isVegetarian == true
         })
@@ -171,6 +172,7 @@ class MenuViewController: UIViewController {
             model.allergens?.Gluten == true
         })
     }
+    
 }
 
 
@@ -199,6 +201,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
             cell.menuName.text = menuItemName
             cell.menuDiscription.text = menuItemDiscription
             cell.totalCalories.text = "Calories \(totalCalories)"
+            cell.menuImageView.image = UIImage(named: "\(menuItem.menuItemId ?? 0)")
         }
         
         return cell
@@ -222,6 +225,27 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
         currentSelectedIndex = indexPath
         performSegue(withIdentifier: "menudetail", sender: self)
     }
+    
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
+        
+        // Allow delete option only if User is Admin
+        guard let isAdmin = currentUser?.isAdmin, isAdmin else {
+            return
+        }
+        
+        if editingStyle == .delete {
+            // delete item at indexPath
+            self.currentMenuItemsArray[self.menuSectionArray[indexPath.section]]?.remove(at: indexPath.row)
+            
+            guard let menuModelToDelete = self.currentMenuItemsArray[self.menuSectionArray[indexPath.section]]?[indexPath.row]
+                else { return }
+            APIManager.shared.deleteDocument(menuModelToDelete) { (isSuccess) in
+                if let isSuccess = isSuccess, isSuccess {
+                    tableView.deleteRows(at: [indexPath], with: .fade)
+                }
+            }
+        }
+    }
 }
 
 
@@ -231,7 +255,6 @@ extension MenuViewController: UISearchBarDelegate {
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         currentMenuItemsArray = menuItemsArray
         updateMenuItems(searchText)
-        menuTableView.reloadData()
         previousSearchText = searchText
     }
     
@@ -252,13 +275,15 @@ extension MenuViewController: UISearchBarDelegate {
                 currentMenuItemsArray.removeValue(forKey: key)
             }
         }
+        
+        menuTableView.reloadData()
     }
 }
 
 struct FilterFields {
     
     var isVegan: Bool?
-    var isVegitarian: Bool?
+    var isVegetarian: Bool?
     var isMindful: Bool?
     var Eggs: Bool?
     var Gluten: Bool?
@@ -270,7 +295,7 @@ struct FilterFields {
     init(filterModel: MenuModel, filterDic: [String: Any]) {
         
         self.isVegan = filterModel.isVegan
-        self.isVegitarian = filterModel.isVegetarian
+        self.isVegetarian = filterModel.isVegetarian
         self.isMindful = filterModel.isMindful
         self.Eggs = filterModel.allergens?.Eggs
         self.Gluten = filterModel.allergens?.Gluten
@@ -290,8 +315,8 @@ struct FilterFields {
                 switch dish {
                 case "Vegan":
                     isVegan = true
-                case "Vegitarian":
-                    isVegitarian = true
+                case "Vegetarian":
+                    isVegetarian = true
                 case "Mindful":
                     isMindful = true
                 default:

@@ -11,18 +11,34 @@ import UIKit
 
 class MenuDetailViewController: UIViewController {
     
+    @IBOutlet var menudetailTableView: UITableView!
     var menuItem: MenuModel?
     private var menuItemDictionary: [String: Any]?
     private let itemsToShow = ["calories", "caloriesFromFat", "fat", "saturatedFat", "transFat", "cholesterol", "carbohydrates", "dietaryFiber", "sugar", "protein", "sodium", "potassium", "portionSize"]
+    private let savedFavoriteMenuItem = UserPreferences.shared.savedFavoriteMenuItem
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        menudetailTableView.sectionHeaderHeight = UITableView.automaticDimension
+        menudetailTableView.estimatedSectionHeaderHeight = 250
         title = "Nutritional Information"
         menuItemDictionary = menuItem?.dictionary
     }
 
-    
+    @objc private func addToFavorite(_ sender: UIButton) {
+        if let menuItem = menuItem, let formalName = menuItem.formalName {
+            if sender.titleLabel?.text == "Add to Favroite" {
+                UserPreferences.shared.savedFavoriteMenuItem = [menuItem]
+                sender.setTitle("Remove from Favroite", for: .normal)
+                Alert.shared.showAlert(title: "\(formalName) added to favroite", message: nil, on: self)
+            } else {
+                UserPreferences.shared.removeFavorite(menuItem: menuItem)
+                sender.setTitle("Add to Favroite", for: .normal)
+                Alert.shared.showAlert(title: "\(formalName) removed to favroite", message: nil, on: self)
+            }
+        }
+    }
 }
 
 
@@ -43,8 +59,40 @@ extension MenuDetailViewController: UITableViewDelegate, UITableViewDataSource {
         cell.titleLabel?.text = menuItem.title
         cell.valueLabel?.text = menuItemDictionary?[menuItem.rawValue] as? String
         return cell
-        
     }
+    
+    func tableView(_ tableView: UITableView, viewForHeaderInSection section: Int) -> UIView? {
+        guard let cell = tableView.dequeueReusableCell(withIdentifier: "MenuDetailHeader") as? MenuDetailHeaderCell else {
+            return UITableViewCell()
+        }
+        
+        // Add placeholder image in default value
+        if let menuItemImage = UIImage(named: "\(menuItem?.menuItemId ?? 0)") {
+            cell.menuItemImageView?.image = menuItemImage
+        }
+        cell.menuItemName.text = menuItem?.formalName
+        cell.menuItemDescription.text = menuItem?.description
+        return cell
+    }
+    
+    func tableView(_ tableView: UITableView, viewForFooterInSection section: Int) -> UIView? {
+        guard let cell =  tableView.dequeueReusableCell(withIdentifier: "MenuDetailFooterCell") as? MenuDetailFooterCell else {
+            return UITableViewCell()
+        }
+        
+        cell.addToFavoriteButton.addTarget(self, action: #selector(addToFavorite(_:)), for: .touchUpInside)
+        
+        if let savedFavoriteMenuItem = savedFavoriteMenuItem, let menuItem = menuItem, savedFavoriteMenuItem.contains(menuItem) {
+            cell.addToFavoriteButton.setTitle("Remove from Favroite", for: .normal)
+        } else {
+            cell.addToFavoriteButton.setTitle("Add to Favroite", for: .normal)
+        }
+        return cell
+    }
+    
+//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+//        return 250
+//    }
 }
 
 extension Encodable {

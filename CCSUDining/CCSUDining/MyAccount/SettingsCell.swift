@@ -9,7 +9,7 @@
 import Foundation
 import UIKit
 
-class SettingsCell: UITableViewCell {
+class MyAccountFooterCell: UITableViewCell {
     @IBOutlet var titleLable: UILabel!
     @IBOutlet var titleValue: UITextField!
 }

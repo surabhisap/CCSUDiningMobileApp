@@ -7,6 +7,7 @@
 
 import CodableFirebase
 import FirebaseFirestore
+import Firebase
 
 class APIManager {
     // created shared instance
@@ -27,6 +28,7 @@ class APIManager {
                     }
                 }
 
+                UserPreferences.shared.savedAllMenuModels = menuModels
                 //Group the menu models by Dining hall names eg. [["Memorial Hall": [menuModel1, menuModel2, ...,menuModeln], ["Devil's den": [menuModel5, menuModel6, ...,menuModelm] ]]
                 let groupedMenuModels = menuModels.group(by: { $0.dining_hall ?? "" })
                 completionHandler(groupedMenuModels)
@@ -62,6 +64,58 @@ class APIManager {
                 }
                 completionHandler(snapshot.documents.first?.data().values.first)
            }
+        }
+    }
+    
+    func fetchCurrentUser(completionHandler: @escaping ((UserModel?) -> Void)) {
+        
+        // Get Current userId
+         guard let userID = Auth.auth().currentUser?.uid else { return completionHandler(nil) }
+        
+        // Get document
+        db.collection("user").document(userID).getDocument { document, error in
+            if let document = document, let documentData = document.data() {
+                let model = try? FirestoreDecoder().decode(UserModel.self, from: documentData)
+               completionHandler(model)
+            } else {
+                print("Document does not exist")
+            }
+        }
+    }
+    
+    func deleteDocument(_ menuModel: MenuModel, completionHandler: @escaping ((Bool?) -> Void)) {
+        
+        guard let date = menuModel.startTime, let menuItemId = menuModel.menuItemId else {
+            completionHandler(false)
+            return
+        }
+        
+        let formatter = DateFormatter()
+        formatter.dateFormat = "yyyy-MM-dd"
+        let dateString = formatter.string(from: date.dateValue())
+        
+        db.collection(dateString).document("\(menuItemId)").updateData([
+            "capital": FieldValue.delete(),
+        ]) { err in
+            if let err = err {
+                print("Error updating document: \(err)")
+                completionHandler(false)
+            } else {
+                print("Document successfully updated")
+                completionHandler(true)
+            }
+        }
+    }
+    
+    // Add a new document with a generated id.
+    func submitAppFeedback(title: String, comment: String) {
+        db.collection("feedback").addDocument(data: [
+            "title": title,
+            "comment": comment
+        ]) { err in
+            if let err = err {
+                print("Error adding document: \(err)")
+            }
         }
     }
     
