@@ -12,7 +12,7 @@ import UIKit
 class MenuFilterViewController: UIViewController {
     
     @IBOutlet weak var collectionView: UICollectionView!
-    private let dishesOptionArray = ["Vegan", "Vegitarian", "Mindful"]
+    private let dishesOptionArray = ["Vegan", "Vegetarian", "Mindful"]
     private let allergensOptionArray = ["Milk", "Eggs", "Gluten", "Soybean", "Wheat"]
     private var headerview: MenuFilterCustomHeaderCell?
     private var selectionDictionary = [String: Any]()
@@ -63,6 +63,9 @@ class MenuFilterViewController: UIViewController {
         }
     }
     
+    @IBAction func closeAction(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
 }
 
 extension MenuFilterViewController: UICollectionViewDelegate, UICollectionViewDataSource {

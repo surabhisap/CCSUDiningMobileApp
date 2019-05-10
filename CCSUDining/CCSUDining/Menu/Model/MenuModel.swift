@@ -8,9 +8,10 @@
 import Foundation
 import FirebaseFirestore
 
-struct MenuModel: Codable {
+struct MenuModel: Codable, Equatable {
     
     var allergens: Allergerns?
+    var menuItemId: Int64?
     var dining_hall: String?
     var formalName: String?
     var description: String?
@@ -34,6 +35,10 @@ struct MenuModel: Codable {
     var isVegan: Bool?
     var isVegetarian: Bool?
     var isMindful: Bool?
+    
+    static func == (lhs: MenuModel, rhs: MenuModel) -> Bool {
+        return lhs.menuItemId == rhs.menuItemId
+    }
 }
 
 struct Allergerns: Codable {

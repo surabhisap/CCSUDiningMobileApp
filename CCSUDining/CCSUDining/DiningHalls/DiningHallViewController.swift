@@ -22,12 +22,14 @@ class DiningHallViewController: UIViewController {
     private var dinerRatingDictionary = [String: String]()
     private var currentLocation: CLLocation?
     private let locationManager = CLLocationManager()
+    private var currentUser: UserModel?
     
     override func viewDidLoad() {
         super.viewDidLoad()
         
         getAndPopulateDinerData()
         configureLocationManager()
+        
     }
     
     private func getAndPopulateDinerData() {
@@ -60,6 +62,7 @@ class DiningHallViewController: UIViewController {
                 
                 if let menuArray = menuArray[diningHallArray[selectedDinerIndex]]?.group(by: { $0.meal ?? "" }) {
                     menuViewController.menuItemsArray = menuArray
+                    menuViewController.currentUser = currentUser
                 }
             }
         } else if segue.identifier == "dinerReviews" {
@@ -92,6 +95,13 @@ class DiningHallViewController: UIViewController {
         }))
         
         self.present(mapOptions, animated: true, completion: nil)
+    }
+    
+    private func getCurrentUser() {
+        
+        APIManager.shared.fetchCurrentUser { [weak self] (currentUser) in
+            self?.currentUser = currentUser
+        }
     }
     
 }

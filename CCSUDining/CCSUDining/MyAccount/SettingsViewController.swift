@@ -34,8 +34,8 @@ class SettingsViewController: UIViewController {
                 if let firstName = document.data()?["firstName"],  let lastName = document.data()?["lastName"] {
                     self?.settingsArray = ["\(firstName) \(lastName)"]
                     
-                    if let username = document.data()?["username"] {
-                        self?.settingsArray?.append("\(username)")
+                    if let email = document.data()?["email"] {
+                        self?.settingsArray?.append("\(email)")
                     }
                 }
             }
@@ -61,7 +61,7 @@ class SettingsViewController: UIViewController {
     }
 }
 
-extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
+/*extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         
@@ -96,4 +96,4 @@ extension SettingsViewController: UITableViewDelegate, UITableViewDataSource {
         return 50
     }
     
-}
+}*/
