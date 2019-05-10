@@ -19,7 +19,6 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var firstNameTextField: UITextField!
     @IBOutlet weak var lastNameTextField: UITextField!
     @IBOutlet weak var emailTextField: UITextField!
-    @IBOutlet weak var usernameTextField: UITextField!
     @IBOutlet weak var passwordTextField: UITextField!
     @IBOutlet weak var repasswordTextField: UITextField!
     
@@ -75,17 +74,6 @@ class SignUpViewController: UIViewController {
     }//end of isValidEmail method
     
     
-    //Method is used for username field validation
-    @discardableResult
-    func isUserNameEmpty() -> Bool {
-        if(usernameTextField.text == ""){
-            errorsArray.append("Username field is empty!")
-            return false
-        }
-        return true
-    }//end of username field validation
-    
-    
     //Method is used for password's fields match validation
     @discardableResult
     func isPaswordsMatch() -> Bool {
@@ -115,7 +103,6 @@ class SignUpViewController: UIViewController {
         errorsArray = [String]()//empty our errorsArray before checks will performe
         
         isValidEmail()
-        isUserNameEmpty()
         isPasswordsEmpty()
         isPaswordsMatch()
         
@@ -135,7 +122,6 @@ class SignUpViewController: UIViewController {
     func createUserInDataBase()
     {
         guard let email = emailTextField.text,
-            let username = usernameTextField.text,
             let password = passwordTextField.text,
             let firstName = firstNameTextField.text,
             let lastName = lastNameTextField.text else{
@@ -157,13 +143,13 @@ class SignUpViewController: UIViewController {
             
             //Push entered information to Firebase Database
             //Guard statment gives us access to UID similar to email, Username and Password above.
-            guard let userID = Auth.auth().currentUser?.uid else {return}
+            guard let userID = Auth.auth().currentUser?.uid else { return }
             
             Firestore.firestore().collection("user").document(userID).setData([
-                "username" : username,
                 "email" : email,
                 "firstName" : firstName,
                 "lastName" : lastName,
+                "isAdmin": false,
                 "dateCreated": FieldValue.serverTimestamp()
                 
                 ], completion: { (error) in
@@ -190,4 +176,12 @@ class SignUpViewController: UIViewController {
         
     }
     
+}
+
+extension SignUpViewController: UITextFieldDelegate {
+    
+    func textFieldShouldReturn(_ textField: UITextField) -> Bool {
+        textField.resignFirstResponder()
+        return true
+    }
 }
