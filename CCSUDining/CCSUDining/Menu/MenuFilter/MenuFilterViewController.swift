@@ -119,7 +119,7 @@ extension MenuFilterViewController: UICollectionViewDelegate, UICollectionViewDa
             return
         }
         
-        filterCell.layer.borderWidth = 2
+        filterCell.layer.borderWidth = 5
         filterCell.layer.borderColor = UIColor.white.cgColor
         let filterIdentifier = indexPath.section == 0 ? "dishes" : "allergens"
         
