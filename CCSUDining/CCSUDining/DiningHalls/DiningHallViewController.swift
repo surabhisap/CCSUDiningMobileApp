@@ -142,6 +142,7 @@ enum DiningHallType: String, CaseIterable {
     case hilltop_cafe = "hilltop_cafe"
     case memorial_hall = "memorial_hall"
     case devils_den = "devils_den"
+    case Starbucks = "Starbucks"
     
     var hallName: String {
         switch self {
@@ -151,6 +152,8 @@ enum DiningHallType: String, CaseIterable {
             return "Memorial Hall"
         case .devils_den:
             return "Devil's Den"
+        case .Starbucks:
+            return "Starbucks"
         }
     }
     
@@ -159,9 +162,11 @@ enum DiningHallType: String, CaseIterable {
         case .hilltop_cafe:
             return CLLocationCoordinate2D(latitude: 41.6938183, longitude: -72.7637449)
         case .memorial_hall:
-            return CLLocationCoordinate2D(latitude: 41.6933, longitude: -72.7642)
+            return CLLocationCoordinate2D(latitude: 41.691544, longitude: -72.767723)
         case .devils_den:
-            return CLLocationCoordinate2D(latitude: 41.6933, longitude: -72.7642)
+            return CLLocationCoordinate2D(latitude: 41.692188, longitude: -72.767914)
+        case .Starbucks:
+            return CLLocationCoordinate2D(latitude: 41.6931, longitude: -72.7642)
         }
     }
     

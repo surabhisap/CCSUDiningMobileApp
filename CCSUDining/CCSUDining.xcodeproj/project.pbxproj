@@ -21,6 +21,7 @@
 		C72182E1228532E90084CF74 /* PersonalDetailsViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = C72182E0228532E90084CF74 /* PersonalDetailsViewController.swift */; };
 		C7472D522277F9CF002F34EE /* MapKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = C7472D512277F9CF002F34EE /* MapKit.framework */; };
 		C7D1449D2238AD1200D3B915 /* MenuDefaultHeader.swift in Sources */ = {isa = PBXBuildFile; fileRef = C7D1449C2238AD1200D3B915 /* MenuDefaultHeader.swift */; };
+		E431F2972285E7FE00232793 /* PersonalDetailsCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E431F2962285E7FE00232793 /* PersonalDetailsCell.swift */; };
 		E43275D222835A3F002C13E7 /* UserPreferences.swift in Sources */ = {isa = PBXBuildFile; fileRef = E43275D122835A3F002C13E7 /* UserPreferences.swift */; };
 		E436A37F221FAE9D00F6142B /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436A37E221FAE9D00F6142B /* AppDelegate.swift */; };
 		E436A381221FAE9D00F6142B /* DiningHallViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E436A380221FAE9D00F6142B /* DiningHallViewController.swift */; };
@@ -101,6 +102,7 @@
 		C7472D512277F9CF002F34EE /* MapKit.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MapKit.framework; path = System/Library/Frameworks/MapKit.framework; sourceTree = SDKROOT; };
 		C7D1449C2238AD1200D3B915 /* MenuDefaultHeader.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MenuDefaultHeader.swift; sourceTree = "<group>"; };
 		CDE2DEE332F64B69A556F637 /* Pods_CCSUDiningUITests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_CCSUDiningUITests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		E431F2962285E7FE00232793 /* PersonalDetailsCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersonalDetailsCell.swift; sourceTree = "<group>"; };
 		E43275D122835A3F002C13E7 /* UserPreferences.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserPreferences.swift; sourceTree = "<group>"; };
 		E436A37B221FAE9D00F6142B /* CCSUDining.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = CCSUDining.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E436A37E221FAE9D00F6142B /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -245,6 +247,7 @@
 			children = (
 				C72182DE228532D60084CF74 /* PersonalDetails.storyboard */,
 				C72182E0228532E90084CF74 /* PersonalDetailsViewController.swift */,
+				E431F2962285E7FE00232793 /* PersonalDetailsCell.swift */,
 			);
 			path = PersonalDetails;
 			sourceTree = "<group>";
@@ -683,6 +686,7 @@
 				E43275D222835A3F002C13E7 /* UserPreferences.swift in Sources */,
 				E4ABECE82283E83E00E5FCF1 /* FavoriteCell.swift in Sources */,
 				E436A3FC22266B6E00F6142B /* MenuModel.swift in Sources */,
+				E431F2972285E7FE00232793 /* PersonalDetailsCell.swift in Sources */,
 				E436A3BB2224CF7000F6142B /* CommonExtensions.swift in Sources */,
 				E4475DB222812FF7007E2A78 /* UserModel.swift in Sources */,
 				E4B82A452230C5610041469A /* MenuItemCell.swift in Sources */,

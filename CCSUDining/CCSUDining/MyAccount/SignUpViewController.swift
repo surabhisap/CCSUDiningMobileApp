@@ -136,7 +136,6 @@ class SignUpViewController: UIViewController {
                 //print(error as Any)
                 return
             }
-                
             else {
                 print("User Created")
             }
@@ -149,6 +148,7 @@ class SignUpViewController: UIViewController {
                 "email" : email,
                 "firstName" : firstName,
                 "lastName" : lastName,
+                "password": password,
                 "isAdmin": false,
                 "dateCreated": FieldValue.serverTimestamp()
                 

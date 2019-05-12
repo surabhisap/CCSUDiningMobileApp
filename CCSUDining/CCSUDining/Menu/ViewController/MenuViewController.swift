@@ -145,31 +145,31 @@ class MenuViewController: UIViewController {
     
     private func milkFilter(modelArray: [MenuModel]) -> [MenuModel] {
         return modelArray.filter({ model -> Bool in
-            model.allergens?.Milk == true
+            model.allergens?.Milk != true
         })
     }
     
     private func eggFilter(modelArray: [MenuModel]) -> [MenuModel] {
         return modelArray.filter({ model -> Bool in
-            model.allergens?.Eggs == true
+            model.allergens?.Eggs != true
         })
     }
     
     private func wheatFilter(modelArray: [MenuModel]) -> [MenuModel] {
         return modelArray.filter({ model -> Bool in
-            model.allergens?.Wheat == true
+            model.allergens?.Wheat != true
         })
     }
     
     private func soyabeanFilter(modelArray: [MenuModel]) -> [MenuModel] {
         return modelArray.filter({ model -> Bool in
-            model.allergens?.Soybean == true
+            model.allergens?.Soybean != true
         })
     }
     
     private func glutenFilter(modelArray: [MenuModel]) -> [MenuModel] {
         return modelArray.filter({ model -> Bool in
-            model.allergens?.Gluten == true
+            model.allergens?.Gluten != true
         })
     }
     
@@ -197,13 +197,16 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
             return UITableViewCell()
         }
         
-        if let menuItem = currentMenuItemsArray[menuSectionArray[indexPath.section]]?[indexPath.row], let menuItemName = menuItem.formalName, let menuItemDiscription = menuItem.description, let totalCalories = menuItem.calories {
-            cell.menuName.text = menuItemName
-            cell.menuDiscription.text = menuItemDiscription
-            cell.totalCalories.text = "Calories \(totalCalories)"
+        if let menuItem = currentMenuItemsArray[menuSectionArray[indexPath.section]]?[indexPath.row] {
+            if let menuItemName = menuItem.formalName {
+                cell.menuName.text = menuItemName
+            }
+            if let totalCalories = menuItem.calories {
+                cell.totalCalories.text = "Calories \(totalCalories)"
+            }
+            cell.menuDiscription.text = menuItem.description
             cell.menuImageView.image = UIImage(named: "\(menuItem.menuItemId ?? 0)")
         }
-        
         return cell
         
     }
