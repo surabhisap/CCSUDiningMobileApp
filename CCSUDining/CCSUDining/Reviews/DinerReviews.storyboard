@@ -77,7 +77,7 @@
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="VcR-8Y-ck2" customClass="InspectableUIButton" customModule="CCSUDining" customModuleProvider="target">
                                 <rect key="frame" x="112.5" y="567" width="150" height="34"/>
-                                <color key="backgroundColor" red="0.18422721349999999" green="0.33976612049999999" blue="0.57649797199999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
+                                <color key="backgroundColor" red="0.25686553120613098" green="0.47475820779800415" blue="0.79590171575546265" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="width" constant="150" id="Phy-bI-Gsq"/>
                                 </constraints>

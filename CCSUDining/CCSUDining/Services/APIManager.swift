@@ -23,7 +23,7 @@ class APIManager {
                 for document in documents {
                     //Decode the data and populate MenuModel
                     let menuModel = try! FirestoreDecoder().decode(MenuModel.self, from: document.data())
-                    if let formalName = menuModel.formalName, formalName.count > 0, let description = menuModel.description, description.count > 0 {
+                    if let formalName = menuModel.formalName, formalName.count > 0 {
                         menuModels.append(menuModel)
                     }
                 }
@@ -117,6 +117,21 @@ class APIManager {
                 print("Error adding document: \(err)")
             }
         }
+    }
+    
+    func updateUser(_ userDictionary: [String: String], completionHandler: @escaping ((Bool) -> Void)) {
+       
+        // Get Current userId
+        guard let userID = Auth.auth().currentUser?.uid else { return completionHandler(false) }
+        db.collection("user").document(userID).updateData( userDictionary, completion: { (error) in
+                if let error = error {
+                    completionHandler(false)
+                    print(error as Any)
+                } else {
+                    completionHandler(true)
+                    print ("User Data saved to Firebase Database!")
+                }
+        })
     }
     
 }

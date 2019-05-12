@@ -53,7 +53,7 @@ class UserPreferences {
             // Returning default value if UserDefaults returns nil
             return nil
         }
-        set(newValue) {
+        set {
             if let encoded = try? JSONEncoder().encode(newValue) {
                 UserDefaults.standard.set(encoded, forKey: UserLoggedInKey)
             }
