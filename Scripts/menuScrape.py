@@ -7,6 +7,7 @@ import firebase_admin
 from firebase_admin import credentials
 from firebase_admin import firestore
 import datetime
+import sys
 
 
 def getMenuData (url):
@@ -38,8 +39,8 @@ def updateMenuData (menu):
 
 cred = credentials.Certificate('./db_key.json')
 firebase_admin.initialize_app(cred)
-date ='04/17/2019'
-
+date = str(sys.argv[1])
+print(date)
 devils_den = 'https://menus.sodexomyway.com/BiteMenu/MenuOnly?menuId=16669&locationId=32736&whereami=http://ccsudining.sodexomyway.com/dining-near-me/devils-den&startDate=' + date
 hilltop_cafe = 'https://menus.sodexomyway.com/BiteMenu/MenuOnly?menuId=15271&locationId=32736006&whereami=http://ccsudining.sodexomyway.com/dining-near-me/hilltop-cafe&startDate=' + date
 memorial_hall = 'https://menus.sodexomyway.com/BiteMenu/MenuOnly?menuId=15270&locationId=32736003&whereami=http://ccsudining.sodexomyway.com/dining-near-me/memorial-hall&startDate=' + date
