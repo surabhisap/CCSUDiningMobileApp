@@ -37,7 +37,8 @@ struct MenuModel: Codable, Equatable {
     var isMindful: Bool?
     
     static func == (lhs: MenuModel, rhs: MenuModel) -> Bool {
-        return lhs.menuItemId == rhs.menuItemId
+        //return lhs.menuItemId == rhs.menuItemId
+        return lhs.formalName == rhs.formalName
     }
 }
 

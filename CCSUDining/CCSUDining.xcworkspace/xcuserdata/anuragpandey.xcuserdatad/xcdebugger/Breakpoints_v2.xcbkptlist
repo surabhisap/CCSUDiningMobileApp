@@ -10,7 +10,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CCSUDining/DiningHalls/DiningHallViewController.swift"
-            timestampString = "578506586.9304301"
+            timestampString = "579475203.885341"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "70"
@@ -26,76 +26,12 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CCSUDining/Menu/ViewController/MenuViewController.swift"
-            timestampString = "579156081.857664"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
-            landmarkName = "prepare(for:sender:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CCSUDining/Menu/MenuDetail/MenuDetailViewController.swift"
-            timestampString = "579148912.704154"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "tableView(_:viewForHeaderInSection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CCSUDining/Menu/ViewController/MenuViewController.swift"
-            timestampString = "579156081.85774"
+            timestampString = "579477074.132344"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "225"
             endingLineNumber = "225"
-            landmarkName = "tableView(_:didSelectRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CCSUDining/Menu/ViewController/MenuViewController.swift"
-            timestampString = "579156081.857787"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "279"
-            endingLineNumber = "279"
-            landmarkName = "updateMenuItems(_:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "CCSUDining/Menu/ViewController/MenuViewController.swift"
-            timestampString = "579156081.857829"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "202"
-            endingLineNumber = "202"
-            landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkName = "tableView(_:heightForHeaderInSection:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
@@ -121,13 +57,13 @@
                   symbolName = "CCSUDining.SignInViewController.(fetchUserProfile in _40486DC8354658B95144FA2D0C9571A3)(for: Swift.String) -&gt; ()"
                   moduleName = "CCSUDining"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anuragpandey/Downloads/CCSU_DIning_CapstoneProject/CCSUDining/CCSUDining/MyAccount/SignInViewController.swift"
-                  timestampString = "579155966.593017"
+                  urlString = "file:///Users/anuragpandey/Documents/CCSU_DIning_CapstoneProject/CCSUDining/CCSUDining/MyAccount/SignInViewController.swift"
+                  timestampString = "579477439.3516541"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "47"
                   endingLineNumber = "47"
-                  offsetFromSymbolStart = "108">
+                  offsetFromSymbolStart = "41">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -136,13 +72,13 @@
                   symbolName = "closure #1 (Swift.Optional&lt;CCSUDining.UserModel&gt;) -&gt; () in CCSUDining.SignInViewController.(fetchUserProfile in _40486DC8354658B95144FA2D0C9571A3)(for: Swift.String) -&gt; ()"
                   moduleName = "CCSUDining"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anuragpandey/Downloads/CCSU_DIning_CapstoneProject/CCSUDining/CCSUDining/MyAccount/SignInViewController.swift"
-                  timestampString = "579155966.595059"
+                  urlString = "file:///Users/anuragpandey/Documents/CCSU_DIning_CapstoneProject/CCSUDining/CCSUDining/MyAccount/SignInViewController.swift"
+                  timestampString = "579477439.353579"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "47"
                   endingLineNumber = "47"
-                  offsetFromSymbolStart = "96">
+                  offsetFromSymbolStart = "78">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -234,7 +170,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CCSUDining/Common/UserPreferences.swift"
-            timestampString = "579151169.67521"
+            timestampString = "579460768.47418"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "56"
@@ -266,7 +202,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "CCSUDining/Menu/ViewController/MenuViewController.swift"
-            timestampString = "579156081.857946"
+            timestampString = "579477074.132829"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "74"
@@ -281,13 +217,13 @@
                   symbolName = "CCSUDining.MenuViewController.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) -&gt; ()"
                   moduleName = "CCSUDining"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anuragpandey/Downloads/CCSU_DIning_CapstoneProject/CCSUDining/CCSUDining/Menu/ViewController/MenuViewController.swift"
-                  timestampString = "579155966.625283"
+                  urlString = "file:///Users/anuragpandey/Documents/CCSU_DIning_CapstoneProject/CCSUDining/CCSUDining/Menu/ViewController/MenuViewController.swift"
+                  timestampString = "579477439.384043"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "74"
                   endingLineNumber = "74"
-                  offsetFromSymbolStart = "4256">
+                  offsetFromSymbolStart = "6306">
                </Location>
                <Location
                   shouldBeEnabled = "Yes"
@@ -296,15 +232,47 @@
                   symbolName = "closure #1 (Swift.Dictionary&lt;Swift.String, Any&gt;) -&gt; () in CCSUDining.MenuViewController.prepare(for: __C.UIStoryboardSegue, sender: Swift.Optional&lt;Any&gt;) -&gt; ()"
                   moduleName = "CCSUDining"
                   usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/anuragpandey/Downloads/CCSU_DIning_CapstoneProject/CCSUDining/CCSUDining/Menu/ViewController/MenuViewController.swift"
-                  timestampString = "579155966.6277471"
+                  urlString = "file:///Users/anuragpandey/Documents/CCSU_DIning_CapstoneProject/CCSUDining/CCSUDining/Menu/ViewController/MenuViewController.swift"
+                  timestampString = "579477439.386005"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
                   startingLineNumber = "74"
                   endingLineNumber = "74"
-                  offsetFromSymbolStart = "120">
+                  offsetFromSymbolStart = "121">
                </Location>
             </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CCSUDining/Services/APIManager.swift"
+            timestampString = "579476642.180594"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "34"
+            endingLineNumber = "34"
+            landmarkName = "fetchCollection(collectionName:completionHandler:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "CCSUDining/Services/APIManager.swift"
+            timestampString = "579476642.180992"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "fetchCollection(collectionName:completionHandler:)"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>
