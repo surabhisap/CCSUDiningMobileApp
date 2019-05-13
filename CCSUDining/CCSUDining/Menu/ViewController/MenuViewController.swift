@@ -205,7 +205,7 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.totalCalories.text = "Calories \(totalCalories)"
             }
             cell.menuDiscription.text = menuItem.description
-            cell.menuImageView.image = UIImage(named: "\(menuItem.menuItemId ?? 0)")
+            cell.menuImageView.image = UIImage(named: "\(menuItem.formalName ?? "")")
         }
         return cell
         

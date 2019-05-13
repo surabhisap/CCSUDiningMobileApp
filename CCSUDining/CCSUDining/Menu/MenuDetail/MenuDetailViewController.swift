@@ -67,7 +67,7 @@ extension MenuDetailViewController: UITableViewDelegate, UITableViewDataSource {
         }
         
         // Add placeholder image in default value
-        if let menuItemImage = UIImage(named: "\(menuItem?.menuItemId ?? 0)") {
+        if let menuItemImage = UIImage(named: "\(menuItem?.formalName ?? "")") {
             cell.menuItemImageView?.image = menuItemImage
         }
         cell.menuItemName.text = menuItem?.formalName
