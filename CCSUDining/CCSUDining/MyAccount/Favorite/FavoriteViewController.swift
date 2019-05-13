@@ -45,6 +45,7 @@ extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
             favoriteCell.menuDiscription.text = menuItemDiscription
             favoriteCell.totalCalories.text = "Calories \(totalCalories)"
             favoriteCell.menuImageView.image = UIImage(named: "\(menuItem.menuItemId ?? 0)")
+            
         }
         
         return favoriteCell
