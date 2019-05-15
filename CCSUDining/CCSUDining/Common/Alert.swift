@@ -22,9 +22,11 @@ class Alert {
         viewController.present(alert, animated: true, completion: nil)
     }
     
-    func showAlert(title: String?, message: String?, on viewController: UIViewController, alertAction: UIAlertAction) {
+    func showAlert(title: String?, message: String?, on viewController: UIViewController, alertActions: [UIAlertAction]) {
         let alert = UIAlertController(title: title, message: message, preferredStyle: UIAlertController.Style.alert)
-        alert.addAction(alertAction)
+        for alertAction in alertActions {
+            alert.addAction(alertAction)
+        }
         viewController.present(alert, animated: true, completion: nil)
     }
 }
