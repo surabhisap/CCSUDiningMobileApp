@@ -56,13 +56,13 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNK-jn-YqT">
-                                                                    <rect key="frame" x="2" y="52" width="165" height="30"/>
+                                                                    <rect key="frame" x="2" y="55.5" width="165" height="26.5"/>
                                                                     <state key="normal" title="Add Review(0)">
                                                                         <color key="titleColor" red="0.18848776819999999" green="0.34557688240000001" blue="0.57649797199999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     </state>
                                                                 </button>
                                                                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGC-ks-PdC" customClass="CosmosView" customModule="Cosmos">
-                                                                    <rect key="frame" x="2" y="34" width="165" height="16.5"/>
+                                                                    <rect key="frame" x="2" y="34" width="165" height="20"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </view>
                                                             </subviews>

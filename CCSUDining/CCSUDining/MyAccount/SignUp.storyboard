@@ -21,10 +21,10 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Welcome to CCSU Dining" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sE5-wR-LnJ">
-                                <rect key="frame" x="47" y="76" width="281" height="72"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="30"/>
-                                <nil key="textColor"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="249" text="Welcome to CCSU Dining" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="sE5-wR-LnJ">
+                                <rect key="frame" x="20" y="76" width="335" height="72"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="28"/>
+                                <color key="textColor" red="0.2568655312" green="0.4747582078" blue="0.79590171580000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="hhS-es-m9C">
@@ -123,7 +123,7 @@
                         </subviews>
                         <color key="backgroundColor" red="0.97156583019999998" green="0.97156583019999998" blue="0.97156583019999998" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
-                            <constraint firstItem="sE5-wR-LnJ" firstAttribute="leading" secondItem="STL-Ea-YUg" secondAttribute="leading" constant="47" id="1BQ-bi-sa8"/>
+                            <constraint firstItem="sE5-wR-LnJ" firstAttribute="leading" secondItem="STL-Ea-YUg" secondAttribute="leading" constant="20" id="1BQ-bi-sa8"/>
                             <constraint firstItem="STL-Ea-YUg" firstAttribute="trailing" secondItem="bju-1l-3Gu" secondAttribute="trailing" constant="128" id="8aU-av-GAA"/>
                             <constraint firstItem="hAy-Yn-5Tl" firstAttribute="top" secondItem="QJj-YQ-CcS" secondAttribute="bottom" constant="38.5" id="A7y-qj-5ir"/>
                             <constraint firstItem="hAy-Yn-5Tl" firstAttribute="leading" secondItem="STL-Ea-YUg" secondAttribute="leading" constant="47" id="A9w-Fb-1aM"/>
@@ -134,7 +134,7 @@
                             <constraint firstItem="GKZ-mk-Lwu" firstAttribute="top" secondItem="hhS-es-m9C" secondAttribute="bottom" constant="29" id="PQW-bG-15k"/>
                             <constraint firstItem="STL-Ea-YUg" firstAttribute="trailing" secondItem="3ds-0Q-THZ" secondAttribute="trailing" constant="72" id="PYP-es-Zfc"/>
                             <constraint firstItem="GKZ-mk-Lwu" firstAttribute="leading" secondItem="STL-Ea-YUg" secondAttribute="leading" constant="47" id="T2b-nZ-SDG"/>
-                            <constraint firstItem="STL-Ea-YUg" firstAttribute="trailing" secondItem="sE5-wR-LnJ" secondAttribute="trailing" constant="47" id="W2I-gB-w8g"/>
+                            <constraint firstItem="STL-Ea-YUg" firstAttribute="trailing" secondItem="sE5-wR-LnJ" secondAttribute="trailing" constant="20" id="W2I-gB-w8g"/>
                             <constraint firstItem="QJj-YQ-CcS" firstAttribute="top" secondItem="GKZ-mk-Lwu" secondAttribute="bottom" constant="28" id="Yvn-oL-Th9"/>
                             <constraint firstItem="STL-Ea-YUg" firstAttribute="trailing" secondItem="GKZ-mk-Lwu" secondAttribute="trailing" constant="47" id="i08-1b-7Db"/>
                             <constraint firstItem="bju-1l-3Gu" firstAttribute="top" secondItem="hAy-Yn-5Tl" secondAttribute="bottom" constant="60" id="iIF-SA-2QB"/>
@@ -177,7 +177,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="8"/>
@@ -210,7 +210,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="8"/>
@@ -279,7 +279,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="8"/>
@@ -329,7 +329,7 @@
                                 <rect key="frame" x="47" y="126" width="281" height="39"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="8"/>
@@ -359,7 +359,7 @@
                                 <rect key="frame" x="47" y="63" width="281" height="39"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" autocorrectionType="no" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="8"/>
@@ -709,7 +709,7 @@
                                 </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES"/>
+                                <textInputTraits key="textInputTraits" returnKeyType="next" enablesReturnKeyAutomatically="YES" secureTextEntry="YES"/>
                                 <userDefinedRuntimeAttributes>
                                     <userDefinedRuntimeAttribute type="number" keyPath="layer.cornerRadius">
                                         <integer key="value" value="8"/>
@@ -769,7 +769,7 @@
                                 </connections>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="bOl-Mi-ko2">
-                                <rect key="frame" x="49" y="427" width="281" height="59"/>
+                                <rect key="frame" x="49" y="387" width="281" height="59"/>
                                 <color key="backgroundColor" red="0.88235294119999996" green="0.67843137249999996" blue="0.1137254902" alpha="1" colorSpace="calibratedRGB"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="59" id="bfw-kl-fDq"/>
@@ -800,12 +800,27 @@
                                     <constraint firstAttribute="height" constant="164" id="RMd-co-nsQ"/>
                                 </constraints>
                             </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="7iA-jY-eeA">
+                                <rect key="frame" x="185" y="454" width="150" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="Na1-D4-wqi"/>
+                                    <constraint firstAttribute="width" constant="150" id="tyA-bx-fhW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="15"/>
+                                <state key="normal" title="Forgot Password?">
+                                    <color key="titleColor" red="0.2568655312" green="0.4747582078" blue="0.79590171580000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="forgotPasswordAction:" destination="N1i-zs-ghG" eventType="touchUpInside" id="JUL-CL-Fbh"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="Yu6-T5-WYi" firstAttribute="trailing" secondItem="bOl-Mi-ko2" secondAttribute="trailing" constant="45" id="29w-K8-N4A"/>
-                            <constraint firstItem="bOl-Mi-ko2" firstAttribute="top" secondItem="AEM-cE-MXe" secondAttribute="bottom" constant="91" id="DAb-DE-gf7"/>
+                            <constraint firstItem="bOl-Mi-ko2" firstAttribute="top" secondItem="AEM-cE-MXe" secondAttribute="bottom" constant="51" id="DAb-DE-gf7"/>
                             <constraint firstItem="bOl-Mi-ko2" firstAttribute="leading" secondItem="Yu6-T5-WYi" secondAttribute="leading" constant="49" id="FDn-cc-KOk"/>
+                            <constraint firstItem="7iA-jY-eeA" firstAttribute="top" secondItem="bOl-Mi-ko2" secondAttribute="bottom" constant="8" id="NNS-J3-7e0"/>
                             <constraint firstItem="Yu6-T5-WYi" firstAttribute="trailing" secondItem="AEM-cE-MXe" secondAttribute="trailing" constant="45" id="Nc7-P6-QsE"/>
                             <constraint firstItem="AEM-cE-MXe" firstAttribute="top" secondItem="U4a-E7-u3G" secondAttribute="bottom" constant="24" id="UHj-UV-Qyc"/>
                             <constraint firstItem="Yu6-T5-WYi" firstAttribute="trailing" secondItem="U4a-E7-u3G" secondAttribute="trailing" constant="45" id="boI-m9-vqa"/>
@@ -815,11 +830,13 @@
                             <constraint firstItem="Yu6-T5-WYi" firstAttribute="trailing" secondItem="xdL-hZ-m9g" secondAttribute="trailing" constant="68" id="oXS-wF-WWl"/>
                             <constraint firstItem="xdL-hZ-m9g" firstAttribute="leading" secondItem="Yu6-T5-WYi" secondAttribute="leading" constant="67" id="qqi-xG-aXA"/>
                             <constraint firstItem="U4a-E7-u3G" firstAttribute="leading" secondItem="Yu6-T5-WYi" secondAttribute="leading" constant="49" id="seh-yv-uLt"/>
+                            <constraint firstItem="Yu6-T5-WYi" firstAttribute="trailing" secondItem="7iA-jY-eeA" secondAttribute="trailing" constant="40" id="wCO-BS-I5D"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="Yu6-T5-WYi"/>
                     </view>
                     <connections>
                         <outlet property="emailTextField" destination="U4a-E7-u3G" id="k2N-0p-p9d"/>
+                        <outlet property="forgotPasswordButton" destination="7iA-jY-eeA" id="ta1-ay-gGL"/>
                         <outlet property="passwordTextField" destination="AEM-cE-MXe" id="JKj-Bo-R61"/>
                     </connections>
                 </viewController>
@@ -860,19 +877,19 @@
                                                             <rect key="frame" x="81" y="3" width="264" height="69"/>
                                                             <subviews>
                                                                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" text="Menu Item name" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Urp-tq-f9M">
-                                                                    <rect key="frame" x="0.0" y="0.0" width="264" height="28"/>
+                                                                    <rect key="frame" x="0.0" y="0.0" width="264" height="18"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="15"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="Menu Item description" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltI-Fb-gG2">
-                                                                    <rect key="frame" x="0.0" y="32" width="264" height="17"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="252" text="" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ltI-Fb-gG2">
+                                                                    <rect key="frame" x="0.0" y="22" width="264" height="0.0"/>
                                                                     <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
-                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Calories" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62G-yi-S2s">
-                                                                    <rect key="frame" x="0.0" y="53" width="264" height="16"/>
+                                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="62G-yi-S2s">
+                                                                    <rect key="frame" x="0.0" y="26" width="264" height="43"/>
                                                                     <fontDescription key="fontDescription" type="system" weight="thin" pointSize="13"/>
                                                                     <nil key="textColor"/>
                                                                     <nil key="highlightedColor"/>
@@ -942,7 +959,7 @@
         <image name="ccsuLogo" width="150" height="150"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="6RH-HE-PIt"/>
+        <segue reference="ITn-iL-n07"/>
     </inferredMetricsTieBreakers>
     <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
 </document>

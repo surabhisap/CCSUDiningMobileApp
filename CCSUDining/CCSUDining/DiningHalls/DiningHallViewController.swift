@@ -29,7 +29,7 @@ class DiningHallViewController: UIViewController {
         
         getAndPopulateDinerData()
         configureLocationManager()
-        
+        getCurrentUser()
     }
     
     private func getAndPopulateDinerData() {
