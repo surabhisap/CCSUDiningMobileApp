@@ -40,11 +40,13 @@ extension FavoriteViewController: UITableViewDataSource, UITableViewDelegate {
             return UITableViewCell()
         }
         
-        if let menuItem = favotiteMenuItems?[indexPath.row], let menuItemName = menuItem.formalName, let menuItemDiscription = menuItem.description, let totalCalories = menuItem.calories {
+        if let menuItem = favotiteMenuItems?[indexPath.row], let menuItemName = menuItem.formalName, let totalCalories = menuItem.calories {
             favoriteCell.menuName.text = menuItemName
-            favoriteCell.menuDiscription.text = menuItemDiscription
+            if let menuItemDiscription = menuItem.description {
+                favoriteCell.menuDiscription.text = menuItemDiscription
+            }
             favoriteCell.totalCalories.text = "Calories \(totalCalories)"
-            favoriteCell.menuImageView.image = UIImage(named: "\(menuItem.menuItemId ?? 0)")
+            favoriteCell.menuImageView.image = UIImage(named: "\(menuItem.formalName ?? "")")
             
         }
         

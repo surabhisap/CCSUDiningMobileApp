@@ -231,11 +231,6 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         
-        // Allow delete option only if User is Admin
-        guard let isAdmin = currentUser?.isAdmin, isAdmin else {
-            return
-        }
-        
         if editingStyle == .delete {
             // delete item at indexPath
             self.currentMenuItemsArray[self.menuSectionArray[indexPath.section]]?.remove(at: indexPath.row)
@@ -248,6 +243,14 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
                 }
             }
         }
+    }
+    
+    func tableView(_ tableView: UITableView, editingStyleForRowAt indexPath: IndexPath) -> UITableViewCell.EditingStyle {
+        // Allow delete option only if User is Admin
+        guard let isAdmin = currentUser?.isAdmin, isAdmin else {
+            return .none
+        }
+        return .delete
     }
 }
 
