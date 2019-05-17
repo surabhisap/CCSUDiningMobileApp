@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Meatball Sub.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Meatball Sub.jpg",
       "scale" : "2x"
     },
     {

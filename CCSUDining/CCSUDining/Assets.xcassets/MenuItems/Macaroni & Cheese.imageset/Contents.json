@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Macaroni & Cheese.jpeg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Macaroni & Cheese.jpeg",
       "scale" : "2x"
     },
     {

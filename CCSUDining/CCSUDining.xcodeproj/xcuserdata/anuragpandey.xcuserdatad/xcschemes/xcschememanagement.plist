@@ -7,7 +7,30 @@
 		<key>CCSUDining.xcscheme_^#shared#^_</key>
 		<dict>
 			<key>orderHint</key>
-			<integer>23</integer>
+			<integer>15</integer>
+		</dict>
+		<key>CCSUDiningUITests.xcscheme_^#shared#^_</key>
+		<dict>
+			<key>orderHint</key>
+			<integer>24</integer>
+		</dict>
+	</dict>
+	<key>SuppressBuildableAutocreation</key>
+	<dict>
+		<key>E436A37A221FAE9D00F6142B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E436A390221FAE9E00F6142B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
+		</dict>
+		<key>E436A39B221FAE9E00F6142B</key>
+		<dict>
+			<key>primary</key>
+			<true/>
 		</dict>
 	</dict>
 </dict>

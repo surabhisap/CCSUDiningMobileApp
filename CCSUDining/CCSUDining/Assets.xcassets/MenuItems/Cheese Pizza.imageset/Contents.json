@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Cheese Pizza.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Cheese Pizza.jpg",
       "scale" : "2x"
     },
     {

@@ -27,16 +27,21 @@ class MenuDetailViewController: UIViewController {
     }
 
     @objc private func addToFavorite(_ sender: UIButton) {
-        if let menuItem = menuItem, let formalName = menuItem.formalName {
-            if sender.titleLabel?.text == "Add to Favroite" {
-                UserPreferences.shared.savedFavoriteMenuItem = [menuItem]
-                sender.setTitle("Remove from Favroite", for: .normal)
-                Alert.shared.showAlert(title: "\(formalName) added to favroite", message: nil, on: self)
-            } else {
-                UserPreferences.shared.removeFavorite(menuItem: menuItem)
-                sender.setTitle("Add to Favroite", for: .normal)
-                Alert.shared.showAlert(title: "\(formalName) removed to favroite", message: nil, on: self)
+        
+        if UserPreferences.shared.currentUser?.firstName?.count ?? 0 > 0 {
+            if let menuItem = menuItem, let formalName = menuItem.formalName {
+                if sender.titleLabel?.text == "Add to Favroite" {
+                    UserPreferences.shared.savedFavoriteMenuItem = [menuItem]
+                    sender.setTitle("Remove from Favroite", for: .normal)
+                    Alert.shared.showAlert(title: "\(formalName) added to favroite", message: nil, on: self)
+                } else {
+                    UserPreferences.shared.removeFavorite(menuItem: menuItem)
+                    sender.setTitle("Add to Favroite", for: .normal)
+                    Alert.shared.showAlert(title: "\(formalName) removed to favroite", message: nil, on: self)
+                }
             }
+        } else {
+            Alert.shared.showAlert(title: "Please log in to use this feature", message: "By logging in, you can easliy check your favorite item's avaibility", on: self)
         }
     }
 }
@@ -90,9 +95,9 @@ extension MenuDetailViewController: UITableViewDelegate, UITableViewDataSource {
         return cell
     }
     
-//    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
-//        return 250
-//    }
+    func tableView(_ tableView: UITableView, heightForFooterInSection section: Int) -> CGFloat {
+        return 80
+    }
 }
 
 extension Encodable {

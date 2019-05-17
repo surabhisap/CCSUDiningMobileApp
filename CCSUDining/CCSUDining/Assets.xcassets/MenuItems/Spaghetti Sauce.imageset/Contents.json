@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Spaghetti Sauce.jpeg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Spaghetti Sauce.jpeg",
       "scale" : "2x"
     },
     {

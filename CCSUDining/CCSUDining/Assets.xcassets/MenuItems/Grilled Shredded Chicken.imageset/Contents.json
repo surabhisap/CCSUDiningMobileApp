@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Grilled Shredded Chicken.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Grilled Shredded Chicken.jpg",
       "scale" : "2x"
     },
     {

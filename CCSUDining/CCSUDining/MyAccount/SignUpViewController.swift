@@ -23,8 +23,12 @@ class SignUpViewController: UIViewController {
     @IBOutlet weak var repasswordTextField: UITextField!
     
     var errorsArray = [String]()
-    
     var errorMessage = String()
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        
+    }
     
     //Method for alert box when one of the fields were formmated wrong ------ Olek
     func generalAlert(){
@@ -157,7 +161,7 @@ class SignUpViewController: UIViewController {
                         print(error as Any)
                     } else {
                         print ("User Data saved to Firebase Database!")
-                        self.goToHomePage()// call goToHomePage method
+                        self.fetchUserProfile(for: email)
                     }
             })
             
@@ -165,15 +169,18 @@ class SignUpViewController: UIViewController {
     }
     
     
+    private func fetchUserProfile(for email: String) {
+        
+        APIManager.shared.fetchCurrentUser { [weak self] (userModel) in
+            UserPreferences.shared.currentUser = userModel
+            self?.goToHomePage()
+        }
+    }
+    
     func goToHomePage() {
         let signUpStoryBoard = UIStoryboard(name: "SignUp", bundle: nil)
         let myAccountViewController = signUpStoryBoard.instantiateViewController(withIdentifier: "myAccount") as! MyAccountViewController
         self.navigationController?.setViewControllers([myAccountViewController], animated: false)
-    }
-    
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        
     }
     
 }

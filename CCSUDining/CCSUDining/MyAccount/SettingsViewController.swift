@@ -47,6 +47,7 @@ class SettingsViewController: UIViewController {
         
         do {
             try Auth.auth().signOut()
+            UserPreferences.shared.currentUser = nil
             goToSignUpage()
         }
         catch let signoutError as NSError {

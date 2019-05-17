@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Pork Carnitas.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Pork Carnitas.jpg",
       "scale" : "2x"
     },
     {
