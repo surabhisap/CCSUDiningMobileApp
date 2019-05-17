@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Cheese and Grapes.jpeg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Cheese and Grapes.jpeg",
       "scale" : "2x"
     },
     {

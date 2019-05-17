@@ -24,6 +24,7 @@ class MenuViewController: UIViewController {
     private var previousSearchText: String?
     private var currentSelectedIndex: IndexPath?
     var currentUser: UserModel?
+    private var dinerName: String?
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,6 +32,8 @@ class MenuViewController: UIViewController {
         setUpSearchBar()
         menuSectionArray = [String] ((menuItemsArray.keys))
         sortMenuArray()
+        dinerName = menuItemsArray.values.first?.first?.dining_hall
+        hideKeyboard()
     }
     
     override func viewDidDisappear(_ animated: Bool) {
@@ -52,6 +55,8 @@ class MenuViewController: UIViewController {
         searchBar.delegate = self
         searchBar.showsScopeBar = false // you can show/hide this dependant on your layout
         searchBar.placeholder = "Search Menu by Name"
+        searchBar.subviews[0].subviews.compactMap(){ $0 as? UITextField }.first?.tintColor = .darkGray
+
     }
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
@@ -205,7 +210,13 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
                 cell.totalCalories.text = "Calories \(totalCalories)"
             }
             cell.menuDiscription.text = menuItem.description
-            cell.menuImageView.image = UIImage(named: "\(menuItem.formalName ?? "")")
+            
+            let imageName = menuItem.formalName ?? "".replacingOccurrences(of: "/", with: "", options: NSString.CompareOptions.literal, range: nil)
+            var menuImage = UIImage(named: imageName)
+            if menuImage == nil {
+                menuImage = dinerName != "Starbucks" ?  UIImage(named: "placeholder") :  UIImage(named: "coffeePlaceholder")
+            }
+            cell.menuImageView.image = menuImage
         }
         return cell
         
@@ -258,6 +269,11 @@ extension MenuViewController: UITableViewDelegate, UITableViewDataSource {
 extension MenuViewController: UISearchBarDelegate {
     
     // Search Bar
+    func searchBarSearchButtonClicked(_ searchBar: UISearchBar)
+    {
+        searchBar.endEditing(true)
+    }
+    
     func searchBar(_ searchBar: UISearchBar, textDidChange searchText: String) {
         currentMenuItemsArray = menuItemsArray
         updateMenuItems(searchText)
@@ -351,4 +367,22 @@ struct FilterFields {
         }
     }
     
+}
+
+/**
+    Return keyboard on any where touch
+ */
+extension MenuViewController
+{
+    func hideKeyboard()
+    {
+        let tapGesture: UITapGestureRecognizer = UITapGestureRecognizer(target: self, action: #selector(dismissKeyboard))
+        tapGesture.cancelsTouchesInView = false
+        view.addGestureRecognizer(tapGesture)
+    }
+    
+    @objc func dismissKeyboard()
+    {
+        view.endEditing(true)
+    }
 }

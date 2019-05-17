@@ -56,13 +56,13 @@
                                                                     <nil key="highlightedColor"/>
                                                                 </label>
                                                                 <button opaque="NO" contentMode="scaleToFill" verticalCompressionResistancePriority="749" contentHorizontalAlignment="leading" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QNK-jn-YqT">
-                                                                    <rect key="frame" x="2" y="55.5" width="165" height="26.5"/>
+                                                                    <rect key="frame" x="2" y="52" width="165" height="30"/>
                                                                     <state key="normal" title="Add Review(0)">
                                                                         <color key="titleColor" red="0.18848776819999999" green="0.34557688240000001" blue="0.57649797199999997" alpha="1" colorSpace="custom" customColorSpace="displayP3"/>
                                                                     </state>
                                                                 </button>
                                                                 <view userInteractionEnabled="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="uGC-ks-PdC" customClass="CosmosView" customModule="Cosmos">
-                                                                    <rect key="frame" x="2" y="34" width="165" height="20"/>
+                                                                    <rect key="frame" x="2" y="34" width="165" height="16.5"/>
                                                                     <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                                                 </view>
                                                             </subviews>
@@ -415,7 +415,7 @@
                                                     <nil key="highlightedColor"/>
                                                 </label>
                                                 <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="yy3-zl-KEI">
-                                                    <rect key="frame" x="0.0" y="0.0" width="100" height="73"/>
+                                                    <rect key="frame" x="0.0" y="10" width="100" height="57"/>
                                                 </imageView>
                                             </subviews>
                                         </view>
@@ -424,9 +424,9 @@
                                             <constraint firstAttribute="bottom" secondItem="eHU-Ez-J26" secondAttribute="bottom" constant="5" id="UHv-4T-maU"/>
                                             <constraint firstItem="eHU-Ez-J26" firstAttribute="leading" secondItem="6jU-2N-naX" secondAttribute="leading" constant="5" id="VJG-JO-99c"/>
                                             <constraint firstItem="yy3-zl-KEI" firstAttribute="leading" secondItem="6jU-2N-naX" secondAttribute="leading" id="XxN-5h-O6r"/>
-                                            <constraint firstItem="yy3-zl-KEI" firstAttribute="top" secondItem="6jU-2N-naX" secondAttribute="top" id="awK-jo-HBM"/>
+                                            <constraint firstItem="yy3-zl-KEI" firstAttribute="top" secondItem="6jU-2N-naX" secondAttribute="top" constant="10" id="awK-jo-HBM"/>
                                             <constraint firstAttribute="trailing" secondItem="yy3-zl-KEI" secondAttribute="trailing" id="d91-I6-TuS"/>
-                                            <constraint firstItem="eHU-Ez-J26" firstAttribute="top" secondItem="yy3-zl-KEI" secondAttribute="bottom" constant="4" id="eQW-0j-aoh"/>
+                                            <constraint firstItem="eHU-Ez-J26" firstAttribute="top" secondItem="yy3-zl-KEI" secondAttribute="bottom" constant="10" id="eQW-0j-aoh"/>
                                             <constraint firstAttribute="trailing" secondItem="eHU-Ez-J26" secondAttribute="trailing" constant="4" id="rsN-CV-JoT"/>
                                         </constraints>
                                         <connections>

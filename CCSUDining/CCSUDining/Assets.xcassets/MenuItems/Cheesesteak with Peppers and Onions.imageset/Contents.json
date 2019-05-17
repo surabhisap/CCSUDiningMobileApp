@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Cheesesteak with Peppers and Onions.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Cheesesteak with Peppers and Onions.jpg",
       "scale" : "2x"
     },
     {
