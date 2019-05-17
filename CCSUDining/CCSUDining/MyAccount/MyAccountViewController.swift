@@ -21,6 +21,13 @@ class MyAccountViewController: UIViewController {
         self.navigationController?.navigationItem.rightBarButtonItem  = barButton
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        
+        self.navigationItem.title = "Hello \(UserPreferences.shared.currentUser?.firstName ?? "")"
+
+    }
+    
     @objc func showSettigs(){
         performSegue(withIdentifier: "settings", sender: nil)
     }

@@ -141,7 +141,6 @@ class CCSUDiningUITests: XCTestCase {
         sleep(4)
         app.tables.buttons["Logout"].tap()
        
-        
     }
     
     
