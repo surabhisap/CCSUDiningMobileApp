@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "All Beef Hot Dog on Bun.jpg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "All Beef Hot Dog on Bun.jpg",
       "scale" : "2x"
     },
     {

@@ -31,8 +31,8 @@ class SignInViewController: UIViewController {
         }
         
         Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self] (user, error) in
-            if error != nil{
-                print(error as Any)
+            if let _  = error {
+                Alert.shared.showAlert(title: "Signup Error", message: "Usernam or Passwors is incorrect, please enter your details again", on: self!)
                 return
             }
             else{

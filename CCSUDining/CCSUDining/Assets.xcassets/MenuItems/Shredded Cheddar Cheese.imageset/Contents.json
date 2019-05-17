@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Shredded Cheddar Cheese.jpeg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Shredded Cheddar Cheese.jpeg",
       "scale" : "2x"
     },
     {

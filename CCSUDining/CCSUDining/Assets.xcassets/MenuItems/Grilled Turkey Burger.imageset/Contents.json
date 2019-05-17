@@ -2,11 +2,11 @@
   "images" : [
     {
       "idiom" : "universal",
-      "filename" : "Grilled Turkey Burger.jpeg",
       "scale" : "1x"
     },
     {
       "idiom" : "universal",
+      "filename" : "Grilled Turkey Burger.jpeg",
       "scale" : "2x"
     },
     {
