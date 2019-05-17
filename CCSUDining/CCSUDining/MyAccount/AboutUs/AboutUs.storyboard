@@ -17,19 +17,27 @@
                         <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXd-Av-lMU">
-                                <rect key="frame" x="30" y="94" width="354" height="718"/>
-                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="justified" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="qXd-Av-lMU">
+                                <rect key="frame" x="30" y="64" width="354" height="635"/>
+                                <mutableString key="text">This project is to develop an online application to find food in CCSU campus. The reason behind to develop the system due to issues facing by the students/ staff members in finding available food option on their fingertips rather than visiting all the dining halls to get their desired food. And most importantly some people like me do have dietary restrictions, and also, want to avoid peak hour-long queue. This application will provide solutions for all these problems. 
+ 
+This tells you the importance of a mobile application to find food on your fingertips.
+ 
+The motto of this project was to give the liberty to the user to find the food options available at CCSU.
+ 
+The CCSU dining halls change a portion of menu everyday and our app provides updated menu information to the users. This allows users to spend more time on homework and less time on finding food they like!
+</mutableString>
+                                <fontDescription key="fontDescription" type="system" pointSize="19"/>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstItem="qXd-Av-lMU" firstAttribute="top" secondItem="XRo-Pv-DJr" secondAttribute="top" constant="50" id="9A1-W2-hyo"/>
-                            <constraint firstItem="XRo-Pv-DJr" firstAttribute="bottom" secondItem="qXd-Av-lMU" secondAttribute="bottom" constant="50" id="Fwx-bb-mCw"/>
+                            <constraint firstItem="qXd-Av-lMU" firstAttribute="top" secondItem="XRo-Pv-DJr" secondAttribute="top" constant="20" id="9A1-W2-hyo"/>
                             <constraint firstItem="XRo-Pv-DJr" firstAttribute="trailing" secondItem="qXd-Av-lMU" secondAttribute="trailing" constant="30" id="YOh-DN-YJF"/>
                             <constraint firstItem="qXd-Av-lMU" firstAttribute="leading" secondItem="XRo-Pv-DJr" secondAttribute="leading" constant="30" id="aRx-3u-vm6"/>
+                            <constraint firstAttribute="bottom" relation="greaterThanOrEqual" secondItem="qXd-Av-lMU" secondAttribute="bottom" constant="20" id="cRZ-Ns-EHM"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="XRo-Pv-DJr"/>
                     </view>
