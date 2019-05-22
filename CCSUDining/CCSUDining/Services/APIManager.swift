@@ -1,6 +1,9 @@
 //
 //  APIManager.swift
 //  CCSUDining
+//
+//  https://github.com/alickbass/CodableFirebase
+//  https://firebase.google.com
 //  Created by Surabhi Agnihotri on 2/25/19.
 //  Copyright © 2019 CCSU. All rights reserved.
 //

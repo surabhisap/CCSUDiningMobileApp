@@ -1,7 +1,7 @@
 //
 //  AppDelegate.swift
 //  CCSUDining
-//
+//  https://firebase.google.com
 //  Created by Surabhi Agnihotri on 2/21/19.
 //  Copyright © 2019 CCSU. All rights reserved.
 //

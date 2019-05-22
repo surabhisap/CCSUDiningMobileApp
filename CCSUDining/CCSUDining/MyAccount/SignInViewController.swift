@@ -1,7 +1,7 @@
 //
 //  SignInViewController.swift
 //  CCSUDining
-//
+//  https://firebase.google.com
 //  Created by Surabhi Agnihotri on 4/17/19.
 //  Copyright © 2019 CCSU. All rights reserved.
 //
@@ -22,27 +22,6 @@ class SignInViewController: UIViewController {
         addAttributeToForgotPasswordButton()
     }
     
-    @IBAction func signInAction(_ sender: Any) {
-        
-        guard let email = emailTextField.text, email.count > 0, let password = passwordTextField.text, password.count > 0
-            else {
-                Alert.shared.showAlert(title: "Please enter your details", message: nil, on: self)
-                return
-        }
-        
-        Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self] (user, error) in
-            if let _  = error {
-                Alert.shared.showAlert(title: "Signup Error", message: "Usernam or Passwors is incorrect, please enter your details again", on: self!)
-                return
-            }
-            else{
-                guard let email = user?.user.email else { return }
-                self?.fetchUserProfile(for: email)
-                print("User Logged In")
-            }
-        })
-    }
-    
     @IBAction func forgotPasswordAction(_ sender: Any) {
         
         var emailTextField: UITextField?
@@ -57,7 +36,7 @@ class SignInViewController: UIViewController {
                 if (error == nil) {
                     Alert.shared.showAlert(title: "Password reset", message: "Please check your inbox to reset your password", on: self)
                 } else {
-                     Alert.shared.showAlert(title: "Incorrect email addresst", message: "Please re-try with the email you registered with", on: self)
+                    Alert.shared.showAlert(title: "Incorrect email addresst", message: "Please re-try with the email you registered with", on: self)
                 }
             })
         })
@@ -73,30 +52,46 @@ class SignInViewController: UIViewController {
         
     }
     
+    @IBAction func signInAction(_ sender: Any) {
+        
+        guard let email = emailTextField.text, email.count > 0, let password = passwordTextField.text, password.count > 0
+            else {
+                Alert.shared.showAlert(title: "Please enter your details", message: nil, on: self)
+                return
+        }
+        
+        Auth.auth().signIn(withEmail: email, password: password, completion: { [weak self] (user, error) in
+            if let _  = error {
+                Alert.shared.showAlert(title: "Signup Error", message: "Username or Password is incorrect, please enter your details again", on: self!)
+                return
+            }
+            else{
+                guard let email = user?.user.email else { return }
+                self?.fetchUserProfile(for: email)
+            }
+        })
+    }
+    
     func showErrorAlert(title: String, msg: String) {
         let alert = UIAlertController(title: title, message: msg, preferredStyle: .alert)
         let action = UIAlertAction(title: "OK", style: .default, handler: nil)
         alert.addAction(action)
-        present(alert, animated: true, completion: nil)}
+        present(alert, animated: true, completion: nil)
+        
+    }
     
     private func fetchUserProfile(for email: String) {
         
         APIManager.shared.fetchCurrentUser { [weak self] (userModel) in
             UserPreferences.shared.currentUser = userModel
-            self?.goToStudentPage()
+            self?.goToMyAccountsPage()
         }
         
     }
     
-    private func goToStudentPage() {
+    private func goToMyAccountsPage() {
         let signUpStoryBoard = UIStoryboard(name: "SignUp", bundle: nil)
-        let myAccountViewController = signUpStoryBoard.instantiateViewController(withIdentifier: "myAccount") as! MyAccountViewController
-        self.navigationController?.setViewControllers([myAccountViewController], animated: false)
-    }
-    
-    private func goToAdminPage() {
-        let signUpStoryBoard = UIStoryboard(name: "SignUp", bundle: nil)
-        let myAccountViewController = signUpStoryBoard.instantiateViewController(withIdentifier: "myAccount") as! MyAccountViewController
+        guard let myAccountViewController = signUpStoryBoard.instantiateViewController(withIdentifier: "myAccount") as? MyAccountViewController else { return }
         self.navigationController?.setViewControllers([myAccountViewController], animated: false)
     }
     
@@ -113,6 +108,8 @@ class SignInViewController: UIViewController {
     }
 }
 
+
+// Textfield delegates
 extension SignInViewController: UITextFieldDelegate {
     
     func textFieldShouldReturn(_ textField: UITextField) -> Bool {
