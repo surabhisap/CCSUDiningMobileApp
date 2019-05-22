@@ -12,17 +12,16 @@ class SignUpOptionsViewController: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
         
         if UserPreferences.shared.currentUser?.email?.count ?? 0 > 0 {
-            goToStudentPage()
+            goToMyAccountPage()
         }
     }
 
 
-    private func goToStudentPage() {
+    private func goToMyAccountPage() {
         let signUpStoryBoard = UIStoryboard(name: "SignUp", bundle: nil)
-        let myAccountViewController = signUpStoryBoard.instantiateViewController(withIdentifier: "myAccount") as! MyAccountViewController
+        guard let myAccountViewController = signUpStoryBoard.instantiateViewController(withIdentifier: "myAccount") as? MyAccountViewController else { return }
         self.navigationController?.setViewControllers([myAccountViewController], animated: false)
         self.navigationItem.title = "Hello \(UserPreferences.shared.currentUser?.firstName ?? "")"
     }

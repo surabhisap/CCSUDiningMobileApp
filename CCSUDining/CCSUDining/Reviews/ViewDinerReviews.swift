@@ -1,7 +1,7 @@
 //
 //  ViewDinerReviews.swift
 //  CCSUDining
-//
+//  https://github.com/evgenyneu/Cosmos
 //  Created by Surabhi Agnihotri on 4/21/19.
 //  Copyright © 2019 CCSU. All rights reserved.
 //

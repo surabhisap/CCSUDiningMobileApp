@@ -1,7 +1,7 @@
 //
 //  LoginViewController.swift
 //  CCSUDining
-//
+//  https://firebase.google.com
 //  Created by Surabhi Agnihotri on 4/17/19.
 //  Copyright © 2019 CCSU. All rights reserved.
 //
@@ -45,8 +45,7 @@ class MyAccountViewController: UIViewController {
             try Auth.auth().signOut()
             goToSignUpage()
         }
-        catch let signoutError as NSError {
-            debugPrint("error: \(signoutError) " )
+        catch _ as NSError {
         }
     }
 }
