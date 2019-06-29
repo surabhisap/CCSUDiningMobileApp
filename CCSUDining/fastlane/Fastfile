@@ -1,0 +1,83 @@
+# This file contains the fastlane.tools configuration
+# You can find the documentation at https://docs.fastlane.tools
+#
+# For a list of all available actions, check out
+#
+#     https://docs.fastlane.tools/actions
+#
+# For a list of all available plugins, check out
+#
+#     https://docs.fastlane.tools/plugins/available-plugins
+#
+
+# Uncomment the line if you want fastlane to automatically update itself
+# update_fastlane
+
+default_platform(:ios)
+
+platform :ios do
+  before_all do
+    cocoapods
+    ensure_git_status_clean
+
+  end
+
+# Beta Settings
+  lane :beta do
+
+# Change INFO_PLIST_PATH
+
+  checkNewVersionStart = get_info_plist_value(path: “INFO_PLIST_PATH”, key: "CFBundleVersion")
+  if checkNewVersionStart == "0"
+  increment_build_number(
+      build_number: "0"
+  )
+  end
+
+  formerNumber = get_build_number
+
+  increment_build_number
+  build_number = get_build_number
+  version = get_version_number
+
+  formerVersion = "#{version}-b#{formerNumber}”
+  commitVersion = "#{version}-b#{build_number}”
+
+  set_info_plist_value(path: “INFO_PLIST_PATH", key: "CFBundleVersion", value: build_number)
+  cert(
+    development: true,
+    output_path: "fastlane/certificate"
+    )
+
+  sigh(
+    development: true,
+    force: true,
+    output_path: "fastlane/certificate"
+    )
+  pem(
+    output_path: "fastlane/certificate"
+  )
+
+  gym(scheme: “DEBUG_SCHEME”,
+      workspace: “CCSUDining.xcworkspace",
+      output_directory: “fastlane/ipa/“,
+      clean: true,
+      silent: true,
+      include_bitcode: false
+      )
+
+  commitMessage = changelog_from_git_commits(
+      pretty: "- %s",
+      between: ["v#{version}/iosbeta/#{formerVersion}", "HEAD"]
+      )
+
+  commit_version_bump(
+      message: “Version #{commitVersion}”
+      )
+  add_git_tag(
+      grouping: “v#{version}”,
+      build_number: commitVersion
+      )
+  push_to_git_remote
+  end
+end
